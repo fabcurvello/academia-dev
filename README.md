@@ -16,6 +16,10 @@ com matrícula, player integrado, progresso salvo e calendário de estreias.
 ![SSR](https://img.shields.io/badge/SSR-Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![Vitest](https://img.shields.io/badge/testes-Vitest-6e9f18?style=for-the-badge&logo=vitest&logoColor=white)
 
+### [▶ Abrir a demo online](https://fabcurvello.github.io/academia-dev/)
+
+[![Deploy da demo](https://github.com/fabcurvello/academia-dev/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/fabcurvello/academia-dev/actions/workflows/deploy-pages.yml)
+
 [Funcionalidades](#-funcionalidades) ·
 [Telas](#-telas) ·
 [Angular na prática](#-angular-na-prática) ·
@@ -152,10 +156,19 @@ Abra **http://localhost:4200**.
 | `npm test` | Testes unitários (Vitest) |
 | `npm run build` | Build de produção com SSR |
 | `npm run serve:ssr:academia-dev` | Sobe o servidor Express com o build de produção (porta 4000) |
+| `npx ng build -c production,pages` | Build estático usado na demo do GitHub Pages |
+
+### 🌐 Sobre a demo
+
+A demo é publicada automaticamente no **GitHub Pages** a cada push na `main`, por um workflow do GitHub Actions
+(`.github/workflows/deploy-pages.yml`) que roda os testes antes do build. Como o Pages só serve arquivos estáticos, a
+demo usa a configuração `pages` (renderização no navegador, base `/academia-dev/`). O SSR com Express continua
+disponível no build de produção padrão.
 
 ### 🔑 Contas de demonstração
 
-O login é simulado e não há backend. A tela de login tem atalhos para as duas contas:
+O login é simulado e não há backend. A tela de login tem atalhos para as duas contas (também na
+[demo online](https://fabcurvello.github.io/academia-dev/login)):
 
 | Perfil | E-mail | Senha |
 |---|---|---|

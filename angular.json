@@ -57,6 +57,13 @@
               ],
               "outputHashing": "all"
             },
+            "pages": {
+              "outputHashing": "all",
+              "outputMode": "static",
+              "server": false,
+              "ssr": false,
+              "baseHref": "/academia-dev/"
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,

@@ -9,6 +9,7 @@ export class CursosService {
   private readonly http = inject(HttpClient);
 
   obterCatalogo(): Observable<Catalogo> {
-    return this.http.get<Catalogo>('/data/cursos.json');
+    // Caminho relativo: funciona na raiz (localhost) e em subpasta (GitHub Pages, base href /academia-dev/)
+    return this.http.get<Catalogo>('data/cursos.json');
   }
 }

@@ -15,7 +15,7 @@ describe('App', () => {
   it('cria o app e pede o catálogo de cursos', () => {
     const fixture = TestBed.createComponent(App);
     expect(fixture.componentInstance).toBeTruthy();
-    TestBed.inject(HttpTestingController).expectOne('/data/cursos.json');
+    TestBed.inject(HttpTestingController).expectOne('data/cursos.json');
   });
 
   it('mostra a marca no cabeçalho', async () => {
