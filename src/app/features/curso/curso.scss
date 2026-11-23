@@ -176,3 +176,18 @@
     display: none;
   }
 }
+
+@media (max-width: 600px) {
+  .modulos {
+    --mat-expansion-header-collapsed-state-height: auto;
+    --mat-expansion-header-expanded-state-height: auto;
+
+    mat-expansion-panel-header {
+      padding-block: 14px;
+    }
+
+    mat-panel-description {
+      display: none;
+    }
+  }
+}
