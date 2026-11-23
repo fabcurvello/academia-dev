@@ -1,0 +1,493 @@
+{
+  "canal": "https://www.youtube.com/@fabriciocurvello",
+  "extraidoEm": "2026-11-23",
+  "observacao": "O curso 'python-completo' tem status 'em-breve': todas as aulas são estreias programadas. Cada aula tem o campo 'estreia' (ISO 8601, horário de Brasília); o app só libera a aula quando a data passar. A duração dessas aulas ainda não é exibida pelo YouTube (null). As aulas estão ordenadas pela numeração 'Aula XX.YY'.",
+  "cursos": [
+    {
+      "slug": "python-completo",
+      "titulo": "Python Completo em Aulas Curtas",
+      "categoria": "Python",
+      "status": "em-breve",
+      "descricao": "Curso completo de Python do zero, dividido em aulas curtas de até 7 minutos, cada uma sobre um único assunto. Novas aulas estreiam toda semana às 19h.",
+      "playlistId": "PLK-dxWBYle4Q",
+      "modulos": [
+        {
+          "titulo": "01 · Instalação do Python",
+          "aulas": [
+            { "videoId": "Lgnp2mPQM4g", "titulo": "Python | Baixando o Python | Aula 01.01", "duracao": null, "estreia": "2026-12-07T19:00:00-03:00" },
+            { "videoId": "904YF2Qmsb4", "titulo": "Python | Instalando e testando o Python | Aula 01.02", "duracao": null, "estreia": "2026-12-09T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "02 · Primeiros comandos",
+          "aulas": [
+            { "videoId": "I4I_w8Y-cEI", "titulo": "Python | Abrindo o Python no terminal e o primeiro print | Aula 02.01", "duracao": null, "estreia": "2026-12-11T19:00:00-03:00" },
+            { "videoId": "WvEv3i4wvOI", "titulo": "Python | A função help() | Aula 02.02", "duracao": null, "estreia": "2026-12-14T19:00:00-03:00" },
+            { "videoId": "YIXNI3amTw0", "titulo": "Python | print com vários textos e o parâmetro sep | Aula 02.03", "duracao": null, "estreia": "2026-12-16T19:00:00-03:00" },
+            { "videoId": "QUQMNIi_1xQ", "titulo": "Python | Pular linha (\\n) e o parâmetro end | Aula 02.04", "duracao": null, "estreia": "2026-12-18T19:00:00-03:00" },
+            { "videoId": "7sU9ODbmJto", "titulo": "Python | Variáveis e a função type() | Aula 02.05", "duracao": null, "estreia": "2026-12-21T19:00:00-03:00" },
+            { "videoId": "AWJorBgDmNg", "titulo": "Python | Cálculos com variáveis | Aula 02.06", "duracao": null, "estreia": "2026-12-23T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "03 · Tipos e nomes de variáveis",
+          "aulas": [
+            { "videoId": "ZuElCdE3A1U", "titulo": "Python | Tipos de variáveis e tipagem dinâmica | Aula 03.01", "duracao": null, "estreia": "2026-12-28T19:00:00-03:00" },
+            { "videoId": "ckHV-mVacWk", "titulo": "Python | Como nomear variáveis (snake_case) | Aula 03.02", "duracao": null, "estreia": "2026-12-30T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "04 · IDE PyCharm",
+          "aulas": [
+            { "videoId": "0ubI5YT9nwM", "titulo": "Python | Editores de código e IDEs | Aula 04.01", "duracao": null, "estreia": "2027-01-04T19:00:00-03:00" },
+            { "videoId": "0j5TWRn2RjA", "titulo": "Python | Baixando o PyCharm | Aula 04.02", "duracao": null, "estreia": "2027-01-06T19:00:00-03:00" },
+            { "videoId": "YIEmyq6K-J0", "titulo": "Python | Instalando o PyCharm | Aula 04.03", "duracao": null, "estreia": "2027-01-08T19:00:00-03:00" },
+            { "videoId": "yv-rZi2afKU", "titulo": "Python | Abrindo o PyCharm e o conceito de projetos | Aula 04.04", "duracao": null, "estreia": "2027-01-11T19:00:00-03:00" },
+            { "videoId": "j6xJ2PbiwM0", "titulo": "Python | Criando o projeto e o primeiro arquivo | Aula 04.05", "duracao": null, "estreia": "2027-01-13T19:00:00-03:00" },
+            { "videoId": "SRXgXMs6I2g", "titulo": "Python | Configurando o editor do PyCharm | Aula 04.06", "duracao": null, "estreia": "2027-01-15T19:00:00-03:00" },
+            { "videoId": "wg6OzQ7rYss", "titulo": "Python | Executando o programa no PyCharm | Aula 04.07", "duracao": null, "estreia": "2027-01-18T19:00:00-03:00" },
+            { "videoId": "OEyfQk2bgZo", "titulo": "Python | Comentários de linha | Aula 04.08", "duracao": null, "estreia": "2027-01-20T19:00:00-03:00" },
+            { "videoId": "Pjxzjz-iunE", "titulo": "Python | Comentários de bloco | Aula 04.09", "duracao": null, "estreia": "2027-01-22T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "05 · Programação sequencial",
+          "aulas": [
+            { "videoId": "AuRrcc7lqjc", "titulo": "Python | Criando o projeto de programação sequencial | Aula 05.01", "duracao": null, "estreia": "2027-01-25T19:00:00-03:00" },
+            { "videoId": "H8U99igqWBg", "titulo": "Python | A função input() | Aula 05.02", "duracao": null, "estreia": "2027-01-27T19:00:00-03:00" },
+            { "videoId": "DGUuFIWh0i4", "titulo": "Python | Mensagens claras para o usuário | Aula 05.03", "duracao": null, "estreia": "2027-01-29T19:00:00-03:00" },
+            { "videoId": "-eIOSZgzHvg", "titulo": "Python | O input() sempre retorna texto (str) | Aula 05.04", "duracao": null, "estreia": "2027-02-01T19:00:00-03:00" },
+            { "videoId": "VGVzWVXDqAc", "titulo": "Python | Convertendo com int() e float() | Aula 05.05", "duracao": null, "estreia": "2027-02-02T19:00:00-03:00" },
+            { "videoId": "shMPcs7FYGE", "titulo": "Python | Entrada, processamento e saída | Aula 05.06", "duracao": null, "estreia": "2027-02-03T19:00:00-03:00" },
+            { "videoId": "RuQxGe2Bq6U", "titulo": "Python | Exemplos: média, IMC e desconto | Aula 05.07", "duracao": null, "estreia": "2027-02-04T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "06 · Variáveis",
+          "aulas": [
+            { "videoId": "dByOAyHJk8c", "titulo": "Python | O que é uma variável e a atribuição | Aula 06.01", "duracao": null, "estreia": "2027-02-05T19:00:00-03:00" },
+            { "videoId": "ESx95froaIA", "titulo": "Python | Variáveis com dados do usuário e o tipo booleano | Aula 06.02", "duracao": null, "estreia": "2027-02-10T19:00:00-03:00" },
+            { "videoId": "OCoGdQ3tKLI", "titulo": "Python | Média de notas e a precedência dos operadores | Aula 06.03", "duracao": null, "estreia": "2027-02-11T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "07 · Interpolação e formatação de strings",
+          "aulas": [
+            { "videoId": "up_WFZkC4uo", "titulo": "Python | Concatenação de textos | Aula 07.01", "duracao": null, "estreia": "2027-02-12T19:00:00-03:00" },
+            { "videoId": "G4P3_UT493M", "titulo": "Python | Interpolação com .format() | Aula 07.02", "duracao": null, "estreia": "2027-02-15T19:00:00-03:00" },
+            { "videoId": "Uh8XpoLu5ws", "titulo": "Python | f-strings, lower() e upper() | Aula 07.03", "duracao": null, "estreia": "2027-02-16T19:00:00-03:00" },
+            { "videoId": "CNxJjMZeZ-c", "titulo": "Python | Formatando números float (casas decimais) | Aula 07.04", "duracao": null, "estreia": "2027-02-17T19:00:00-03:00" },
+            { "videoId": "Sw6BIN1rPag", "titulo": "Python | Separador de milhares | Aula 07.05", "duracao": null, "estreia": "2027-02-18T19:00:00-03:00" },
+            { "videoId": "shqXe_bQoqE", "titulo": "Python | Largura total e zeros à esquerda em float | Aula 07.06", "duracao": null, "estreia": "2027-02-19T19:00:00-03:00" },
+            { "videoId": "M4uwYJX1pu8", "titulo": "Python | Formatando float com f-string | Aula 07.07", "duracao": null, "estreia": "2027-02-22T19:00:00-03:00" },
+            { "videoId": "6Jw86ima69I", "titulo": "Python | Formato monetário brasileiro (R$) | Aula 07.08", "duracao": null, "estreia": "2027-02-23T19:00:00-03:00" },
+            { "videoId": "npZOC0Et_X4", "titulo": "Python | Formatando números inteiros | Aula 07.09", "duracao": null, "estreia": "2027-02-24T19:00:00-03:00" },
+            { "videoId": "a6L4KTLKWiw", "titulo": "Python | Formatando um CPF (parte 1) | Aula 07.10", "duracao": null, "estreia": "2027-02-25T19:00:00-03:00" },
+            { "videoId": "yi-eQp94wdE", "titulo": "Python | Formatando um CPF (parte 2) | Aula 07.11", "duracao": null, "estreia": "2027-02-26T19:00:00-03:00" },
+            { "videoId": "F1p93uq8hAs", "titulo": "Python | Formatação com % (estilo antigo) | Aula 07.12", "duracao": null, "estreia": "2027-03-01T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "08 · Operadores",
+          "aulas": [
+            { "videoId": "lkudCI4Fb6g", "titulo": "Python | Raiz quadrada, potência e a biblioteca math | Aula 08.01", "duracao": null, "estreia": "2027-03-02T19:00:00-03:00" },
+            { "videoId": "62ZRpZh4aYo", "titulo": "Python | Operadores aritméticos | Aula 08.02", "duracao": null, "estreia": "2027-03-03T19:00:00-03:00" },
+            { "videoId": "-U8fRPW4mrc", "titulo": "Python | Divisão inteira e resto (// e %) | Aula 08.03", "duracao": null, "estreia": "2027-03-04T19:00:00-03:00" },
+            { "videoId": "mkgyEqLuaZ8", "titulo": "Python | Operadores relacionais | Aula 08.04", "duracao": null, "estreia": "2027-03-05T19:00:00-03:00" },
+            { "videoId": "FgusjzLdfQ4", "titulo": "Python | Operadores lógicos not, and e or | Aula 08.05", "duracao": null, "estreia": "2027-03-08T19:00:00-03:00" },
+            { "videoId": "Vffn8jE4U50", "titulo": "Python | Testando operadores lógicos e o tipo booleano | Aula 08.06", "duracao": null, "estreia": "2027-03-09T19:00:00-03:00" },
+            { "videoId": "JATGzSf7kHY", "titulo": "Python | Tabela verdade | Aula 08.07", "duracao": null, "estreia": "2027-03-10T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "09 · Desvio condicional simples e composto",
+          "aulas": [
+            { "videoId": "vZFM20yVoe8", "titulo": "Python | O que é desvio condicional | Aula 09.01", "duracao": null, "estreia": "2027-03-11T19:00:00-03:00" },
+            { "videoId": "mAOO-yTU474", "titulo": "Python | O comando if e a indentação | Aula 09.02", "duracao": null, "estreia": "2027-03-12T19:00:00-03:00" },
+            { "videoId": "m4zROosUlL8", "titulo": "Python | Exemplo de if com soma de valores | Aula 09.03", "duracao": null, "estreia": "2027-03-15T19:00:00-03:00" },
+            { "videoId": "xu_iqgq3TE0", "titulo": "Python | O bloco do if na prática | Aula 09.04", "duracao": null, "estreia": "2027-03-16T19:00:00-03:00" },
+            { "videoId": "v8s1cjhe9Jw", "titulo": "Python | Desvio condicional composto (if-else) | Aula 09.05", "duracao": null, "estreia": "2027-03-17T19:00:00-03:00" },
+            { "videoId": "YLHP9G5Y1K0", "titulo": "Python | Exemplo maior ou menor de idade | Aula 09.06", "duracao": null, "estreia": "2027-03-18T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "10 · Desvio condicional encadeado e operador ternário",
+          "aulas": [
+            { "videoId": "5O8MG7JPGJI", "titulo": "Python | Desvio condicional encadeado | Aula 10.01", "duracao": null, "estreia": "2027-03-19T19:00:00-03:00" },
+            { "videoId": "u3-vc9bEXck", "titulo": "Python | Exemplo de faixas de valores com if aninhado | Aula 10.02", "duracao": null, "estreia": "2027-03-22T19:00:00-03:00" },
+            { "videoId": "c5H_tPHqCS4", "titulo": "Python | Como o Python interpreta testes encadeados | Aula 10.03", "duracao": null, "estreia": "2027-03-23T19:00:00-03:00" },
+            { "videoId": "owGJt1JE_Ws", "titulo": "Python | Simplificando os testes encadeados | Aula 10.04", "duracao": null, "estreia": "2027-03-24T19:00:00-03:00" },
+            { "videoId": "ueNWRbjAmfU", "titulo": "Python | Usando elif | Aula 10.05", "duracao": null, "estreia": "2027-03-25T19:00:00-03:00" },
+            { "videoId": "5A4SOeGhb5Q", "titulo": "Python | elif na prática | Aula 10.06", "duracao": null, "estreia": "2027-03-26T19:00:00-03:00" },
+            { "videoId": "J7FmjQ-h0kI", "titulo": "Python | Operador ternário | Aula 10.07", "duracao": null, "estreia": "2027-03-29T19:00:00-03:00" },
+            { "videoId": "XdKN8-PQxW8", "titulo": "Python | Segunda forma do operador ternário | Aula 10.08", "duracao": null, "estreia": "2027-03-30T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "11 · Laços com while e for",
+          "aulas": [
+            { "videoId": "RBjjTH7vfGE", "titulo": "Python | Laços de repetição e o while | Aula 11.01", "duracao": null, "estreia": "2027-03-31T19:00:00-03:00" },
+            { "videoId": "NRuTCcZTJOg", "titulo": "Python | Exemplo com while de 1 a 500 | Aula 11.02", "duracao": null, "estreia": "2027-04-01T19:00:00-03:00" },
+            { "videoId": "CZ5rVyw2xTc", "titulo": "Python | Como funcionam contador e incremento | Aula 11.03", "duracao": null, "estreia": "2027-04-05T19:00:00-03:00" },
+            { "videoId": "WLxP7UEVxhg", "titulo": "Python | Variações do laço while | Aula 11.04", "duracao": null, "estreia": "2027-04-06T19:00:00-03:00" },
+            { "videoId": "UQHgPk9uIlI", "titulo": "Python | O laço for com range | Aula 11.05", "duracao": null, "estreia": "2027-04-07T19:00:00-03:00" },
+            { "videoId": "Ze0xCRnGlE0", "titulo": "Python | O passo do range | Aula 11.06", "duracao": null, "estreia": "2027-04-08T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "12 · break e continue",
+          "aulas": [
+            { "videoId": "VK-RquG-FUk", "titulo": "Python | O comando break | Aula 12.01", "duracao": null, "estreia": "2027-04-09T19:00:00-03:00" },
+            { "videoId": "EcuXD2QpIgE", "titulo": "Python | break passo a passo | Aula 12.02", "duracao": null, "estreia": "2027-04-12T19:00:00-03:00" },
+            { "videoId": "sZEt9RF0UIY", "titulo": "Python | Exercício com break | Aula 12.03", "duracao": null, "estreia": "2027-04-13T19:00:00-03:00" },
+            { "videoId": "Evgg5Wb_fac", "titulo": "Python | O comando continue | Aula 12.04", "duracao": null, "estreia": "2027-04-14T19:00:00-03:00" },
+            { "videoId": "a3EbSMm1eLk", "titulo": "Python | continue passo a passo | Aula 12.05", "duracao": null, "estreia": "2027-04-15T19:00:00-03:00" },
+            { "videoId": "OeLuKseN5ao", "titulo": "Python | continue no laço for | Aula 12.06", "duracao": null, "estreia": "2027-04-16T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "13 · Funções",
+          "aulas": [
+            { "videoId": "HnvXw1s3wIA", "titulo": "Python | O que são funções | Aula 13.01", "duracao": null, "estreia": "2027-04-19T19:00:00-03:00" },
+            { "videoId": "sZQNB0UqVms", "titulo": "Python | Criando e chamando funções com def | Aula 13.02", "duracao": null, "estreia": "2027-04-20T19:00:00-03:00" },
+            { "videoId": "HFc12kJQXpM", "titulo": "Python | Chamando a mesma função várias vezes | Aula 13.03", "duracao": null, "estreia": "2027-04-22T19:00:00-03:00" },
+            { "videoId": "Ek3cRQ_idWY", "titulo": "Python | Funções com parâmetros | Aula 13.04", "duracao": null, "estreia": "2027-04-23T19:00:00-03:00" },
+            { "videoId": "jhHur3UmVoo", "titulo": "Python | Passando variáveis como argumento | Aula 13.05", "duracao": null, "estreia": "2027-04-26T19:00:00-03:00" },
+            { "videoId": "708MMhUU50s", "titulo": "Python | Passando valores direto na chamada | Aula 13.06", "duracao": null, "estreia": "2027-04-27T19:00:00-03:00" },
+            { "videoId": "oMSZvS4GPec", "titulo": "Python | PEP 8 e funções com vários parâmetros | Aula 13.07", "duracao": null, "estreia": "2027-04-28T19:00:00-03:00" },
+            { "videoId": "Y2bHuadnIcE", "titulo": "Python | Função com vários parâmetros na prática | Aula 13.08", "duracao": null, "estreia": "2027-04-29T19:00:00-03:00" },
+            { "videoId": "XEmtxrdhuAE", "titulo": "Python | Funções com blocos internos | Aula 13.09", "duracao": null, "estreia": "2027-04-30T19:00:00-03:00" },
+            { "videoId": "PspCq33PkZQ", "titulo": "Python | Retorno de valores com return | Aula 13.10", "duracao": null, "estreia": "2027-05-03T19:00:00-03:00" },
+            { "videoId": "I3wUxnT-auE", "titulo": "Python | return na prática | Aula 13.11", "duracao": null, "estreia": "2027-05-04T19:00:00-03:00" },
+            { "videoId": "LTSSQYMD104", "titulo": "Python | Funções calcular_media e situacao | Aula 13.12", "duracao": null, "estreia": "2027-05-05T19:00:00-03:00" },
+            { "videoId": "QGgMKC7PEg4", "titulo": "Python | Importando funções de outro arquivo | Aula 13.13", "duracao": null, "estreia": "2027-05-06T19:00:00-03:00" },
+            { "videoId": "uM1MdpDg-aA", "titulo": "Python | Comandos globais no import | Aula 13.14", "duracao": null, "estreia": "2027-05-07T19:00:00-03:00" },
+            { "videoId": "XWmVanhyjxo", "titulo": "Python | A variável __name__ | Aula 13.15", "duracao": null, "estreia": "2027-05-10T19:00:00-03:00" },
+            { "videoId": "1yeEbC_zwSI", "titulo": "Python | __name__ na prática | Aula 13.16", "duracao": null, "estreia": "2027-05-11T19:00:00-03:00" },
+            { "videoId": "moG4AKqswfE", "titulo": "Python | Quantidade variável de parâmetros (*args) | Aula 13.17", "duracao": null, "estreia": "2027-05-12T19:00:00-03:00" },
+            { "videoId": "37KkRbOgSWs", "titulo": "Python | Somando valores com *args | Aula 13.18", "duracao": null, "estreia": "2027-05-13T19:00:00-03:00" },
+            { "videoId": "hy9Jsi2LxAM", "titulo": "Python | Funções lambda | Aula 13.19", "duracao": null, "estreia": "2027-05-14T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "14 · Listas, tuplas, dicionários e conjuntos",
+          "aulas": [
+            { "videoId": "gDRLbHws4BI", "titulo": "Python | Listas dinâmicas e índices | Aula 14.01", "duracao": null, "estreia": "2027-05-17T19:00:00-03:00" },
+            { "videoId": "zAhyeOkGu6Y", "titulo": "Python | Criando e exibindo uma lista | Aula 14.02", "duracao": null, "estreia": "2027-05-18T19:00:00-03:00" },
+            { "videoId": "boU3Yn9l4eo", "titulo": "Python | len() e o operador in | Aula 14.03", "duracao": null, "estreia": "2027-05-19T19:00:00-03:00" },
+            { "videoId": "WnPo9OQ0jnM", "titulo": "Python | Adicionando itens com append e insert | Aula 14.04", "duracao": null, "estreia": "2027-05-20T19:00:00-03:00" },
+            { "videoId": "1X-QcpcR6Bs", "titulo": "Python | Exibindo a lista item a item | Aula 14.05", "duracao": null, "estreia": "2027-05-21T19:00:00-03:00" },
+            { "videoId": "kJeW9w_K2TQ", "titulo": "Python | Removendo itens da lista | Aula 14.06", "duracao": null, "estreia": "2027-05-24T19:00:00-03:00" },
+            { "videoId": "IJkGH_aUo_s", "titulo": "Python | Pesquisando itens na lista | Aula 14.07", "duracao": null, "estreia": "2027-05-25T19:00:00-03:00" },
+            { "videoId": "ZAq0tNs0N4Y", "titulo": "Python | count() em listas | Aula 14.08", "duracao": null, "estreia": "2027-05-26T19:00:00-03:00" },
+            { "videoId": "OVYtcisRxso", "titulo": "Python | sort() e ordem alfabética | Aula 14.09", "duracao": null, "estreia": "2027-05-28T19:00:00-03:00" },
+            { "videoId": "9e5NWrRUiMk", "titulo": "Python | Percorrendo um texto com for | Aula 14.10", "duracao": null, "estreia": "2027-05-31T19:00:00-03:00" },
+            { "videoId": "cEC9d7a-npY", "titulo": "Python | Pesquisando letras pelo índice | Aula 14.11", "duracao": null, "estreia": "2027-06-01T19:00:00-03:00" },
+            { "videoId": "AWYk36fkPIQ", "titulo": "Python | Mostrando as posições encontradas | Aula 14.12", "duracao": null, "estreia": "2027-06-02T19:00:00-03:00" },
+            { "videoId": "-R6lthUpkuY", "titulo": "Python | Exibindo uma lista numerada | Aula 14.13", "duracao": null, "estreia": "2027-06-03T19:00:00-03:00" },
+            { "videoId": "Vd6ztvaZJAA", "titulo": "Python | O que são tuplas | Aula 14.14", "duracao": null, "estreia": "2027-06-04T19:00:00-03:00" },
+            { "videoId": "ufHFHgI4BAY", "titulo": "Python | Tuplas na prática | Aula 14.15", "duracao": null, "estreia": "2027-06-07T19:00:00-03:00" },
+            { "videoId": "EhSK2KQW85s", "titulo": "Python | Dicionários | Aula 14.16", "duracao": null, "estreia": "2027-06-08T19:00:00-03:00" },
+            { "videoId": "dUMOlN3MkZk", "titulo": "Python | Acessando itens do dicionário | Aula 14.17", "duracao": null, "estreia": "2027-06-09T19:00:00-03:00" },
+            { "videoId": "sQqX8JejT1g", "titulo": "Python | Adicionando e alterando itens do dicionário | Aula 14.18", "duracao": null, "estreia": "2027-06-10T19:00:00-03:00" },
+            { "videoId": "kqUzWghluEQ", "titulo": "Python | Removendo itens do dicionário | Aula 14.19", "duracao": null, "estreia": "2027-06-11T19:00:00-03:00" },
+            { "videoId": "-euwMZh1yHc", "titulo": "Python | keys(), values() e items() | Aula 14.20", "duracao": null, "estreia": "2027-06-14T19:00:00-03:00" },
+            { "videoId": "WtF3aacBWy4", "titulo": "Python | Conjuntos (set) | Aula 14.21", "duracao": null, "estreia": "2027-06-15T19:00:00-03:00" },
+            { "videoId": "k7el1OaSmvg", "titulo": "Python | Conjuntos não têm ordem | Aula 14.22", "duracao": null, "estreia": "2027-06-16T19:00:00-03:00" },
+            { "videoId": "qXsGXIoL5ww", "titulo": "Python | União e interseção de conjuntos | Aula 14.23", "duracao": null, "estreia": "2027-06-17T19:00:00-03:00" },
+            { "videoId": "dFVCw2q4k30", "titulo": "Python | Lista de dicionários | Aula 14.24", "duracao": null, "estreia": "2027-06-18T19:00:00-03:00" },
+            { "videoId": "rHRtwJZ4AJo", "titulo": "Python | Notas de alunos com dicionários | Aula 14.25", "duracao": null, "estreia": "2027-06-21T19:00:00-03:00" },
+            { "videoId": "auLd9t_y-5A", "titulo": "Python | Relatório de notas dos alunos | Aula 14.26", "duracao": null, "estreia": "2027-06-22T19:00:00-03:00" }
+          ]
+        },
+        {
+          "titulo": "15 · Leitura e escrita em arquivos",
+          "aulas": [
+            { "videoId": "BggN_WmdXGU", "titulo": "Python | Por que trabalhar com arquivos | Aula 15.01", "duracao": null, "estreia": "2027-06-23T19:00:00-03:00" },
+            { "videoId": "B3hx6rw1Nf8", "titulo": "Python | A função open() e os modos | Aula 15.02", "duracao": null, "estreia": "2027-06-24T19:00:00-03:00" },
+            { "videoId": "cYqgCAkpWzA", "titulo": "Python | Escrevendo em um arquivo com write() | Aula 15.03", "duracao": null, "estreia": "2027-06-25T19:00:00-03:00" },
+            { "videoId": "MHIEnQFy8jQ", "titulo": "Python | Escrevendo várias linhas | Aula 15.04", "duracao": null, "estreia": "2027-06-28T19:00:00-03:00" },
+            { "videoId": "DNwXn9S1SsA", "titulo": "Python | Abrindo um arquivo em modo leitura | Aula 15.05", "duracao": null, "estreia": "2027-06-29T19:00:00-03:00" },
+            { "videoId": "he6IK1cFedU", "titulo": "Python | O ponteiro do arquivo | Aula 15.06", "duracao": null, "estreia": "2027-06-30T19:00:00-03:00" },
+            { "videoId": "7LsvAhg0mJE", "titulo": "Python | Lendo linha por linha com for | Aula 15.07", "duracao": null, "estreia": "2027-07-01T19:00:00-03:00" },
+            { "videoId": "0Ls-8SMXT4o", "titulo": "Python | readline() | Aula 15.08", "duracao": null, "estreia": "2027-07-02T19:00:00-03:00" },
+            { "videoId": "w1J37_6Wp-w", "titulo": "Python | Removendo a quebra de linha com strip() | Aula 15.09", "duracao": null, "estreia": "2027-07-05T19:00:00-03:00" },
+            { "videoId": "TZgdmqk5n0I", "titulo": "Python | Exemplo prático com arquivo TXT | Aula 15.10", "duracao": null, "estreia": "2027-07-06T19:00:00-03:00" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "python-essencial",
+      "titulo": "Python Essencial",
+      "categoria": "Python",
+      "status": "publicado",
+      "descricao": "Curso de Python para iniciantes! Todos os conceitos e estruturas necessárias para quem nunca programou conseguir iniciar do zero em Programação.",
+      "playlistId": "PLIn2kYkmuf41bAWw2Ve_cd4TS2ixm78_c",
+      "modulos": [
+        {
+          "titulo": "Primeiros passos",
+          "aulas": [
+            { "videoId": "0xZPa-bI5mA", "titulo": "Python 01 - Instalação", "duracao": "9:01" },
+            { "videoId": "9jfSxi9qj6M", "titulo": "Python 02 - Primeiros Comandos e Variáveis", "duracao": "26:48" },
+            { "videoId": "Fx9vf_8ECmA", "titulo": "Python 03 - Nomenclatura de Variáveis", "duracao": "12:07" },
+            { "videoId": "YTWL1CHfQpw", "titulo": "Python 04 - IDE PyCharm", "duracao": "39:58" }
+          ]
+        },
+        {
+          "titulo": "Programação sequencial",
+          "aulas": [
+            { "videoId": "WlHx9tMooPE", "titulo": "Python 05 - Programação Sequencial", "duracao": "36:27" },
+            { "videoId": "iWtwyPnuhp8", "titulo": "Python 06 - Variáveis", "duracao": "17:36" },
+            { "videoId": "pRQTNirph90", "titulo": "Python 07 - Interpolação de Strings", "duracao": "1:01:59" },
+            { "videoId": "6pIncws_HnI", "titulo": "Python 08 - Operadores", "duracao": "37:26" }
+          ]
+        },
+        {
+          "titulo": "Estruturas de decisão",
+          "aulas": [
+            { "videoId": "ymDD_uUNx7A", "titulo": "Python 09 - Desvio Condicional Simples e Composto", "duracao": "26:14" },
+            { "videoId": "jX8ywrj40Dc", "titulo": "Python 10 - Desvio Condicional Encadeado e Operadores Ternários", "duracao": "45:01" }
+          ]
+        },
+        {
+          "titulo": "Estruturas de repetição",
+          "aulas": [
+            { "videoId": "Yl6CFZ1KYro", "titulo": "Python 11 - Laços (Estruturas de Repetição) com While e For", "duracao": "31:11" },
+            { "videoId": "4ZXvBXgVF4w", "titulo": "Python 12 - Comandos Break e Continue", "duracao": "30:05" }
+          ]
+        },
+        {
+          "titulo": "Funções, coleções e arquivos",
+          "aulas": [
+            { "videoId": "0XraFzw8Epo", "titulo": "Python 13 - Funções", "duracao": "1:35:42" },
+            { "videoId": "5ef1GYpZTVo", "titulo": "Python 14 - Listas Dinâmicas, Tuplas, Dicionários e Conjuntos", "duracao": "1:57:43" },
+            { "videoId": "tCGqX17P6Zw", "titulo": "Python 15 – Leitura e Escrita em Arquivos", "duracao": "58:25" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "java-logica-exercicios",
+      "titulo": "Java: Lógica com Exercícios Resolvidos",
+      "categoria": "Java",
+      "status": "publicado",
+      "descricao": "Listas de exercícios resolvidos passo a passo em Java: programação sequencial, decisão, laços, switch-case, vetores e matrizes.",
+      "modulos": [
+        {
+          "titulo": "Lista 03.1 · Programação sequencial",
+          "playlistId": "PLIn2kYkmuf42swbLyKLmtCE5SPBJv7Yw4",
+          "aulas": [
+            { "videoId": "xVq5QcrJNA4", "titulo": "Java | Configuração Projeto no Eclipse | Ler e exibir nome e sexo | sequencial | Lista 03.1 Q01", "duracao": "11:05" },
+            { "videoId": "SLg1bfV9Zbs", "titulo": "Java | Soma e multiplicação de 4 números | sequencial | Lista 03.1 Q02", "duracao": "7:12" },
+            { "videoId": "H-CapS2glWE", "titulo": "Java | Converter dólar para real | sequencial | Lista 03.1 Q03", "duracao": "5:19" },
+            { "videoId": "WM_KtfPkXDs", "titulo": "Java | Antecessor e sucessor de um número | sequencial | Lista 03.1 Q04", "duracao": "4:41" },
+            { "videoId": "P0J7koDiGnw", "titulo": "Java | Salário com aumento de 15% | sequencial | Lista 03.1 Q05", "duracao": "6:38" },
+            { "videoId": "iUElRlNZRDw", "titulo": "Java | Converter Fahrenheit para Celsius | sequencial | Lista 03.1 Q06", "duracao": "4:49" },
+            { "videoId": "kNr-kpLaEm4", "titulo": "Java | Média de 3 números | sequencial | Lista 03.1 Q07", "duracao": "4:34" },
+            { "videoId": "ngRAANQ8-a0", "titulo": "Java | Consumo de combustível em uma viagem | sequencial | Lista 03.1 Q08", "duracao": "7:32" },
+            { "videoId": "oiMYZS1l1EU", "titulo": "Java | Quadrado e raiz quadrada de um número | sequencial | Lista 03.1 Q09", "duracao": "6:05" },
+            { "videoId": "J_kDC-oCe7A", "titulo": "Java | Prestação em atraso com juros | sequencial | Lista 03.1 Q10", "duracao": "7:16" }
+          ]
+        },
+        {
+          "titulo": "Lista 03.2 · Programação sequencial",
+          "playlistId": "PLIn2kYkmuf415D96OnmcDi6YxYitEe378",
+          "aulas": [
+            { "videoId": "tTt0CYoP7uc", "titulo": "Java | Conta do restaurante com 10% de gorjeta | sequencial | Lista 03.2 Q01", "duracao": "9:29" },
+            { "videoId": "b2gJL9sokTk", "titulo": "Java | Minutos passados desde a meia-noite | sequencial | Lista 03.2 Q02", "duracao": "6:05" },
+            { "videoId": "YpkYzXuhpW0", "titulo": "Java | Converter peso em gramas e altura em cm | sequencial | Lista 03.2 Q03", "duracao": "4:42" },
+            { "videoId": "6gwlcMTF-jk", "titulo": "Java | Cálculo do IMC | sequencial | Lista 03.2 Q04", "duracao": "4:36" },
+            { "videoId": "rwPE5QwMitA", "titulo": "Java | Operações com 2 números | sequencial | Lista 03.2 Q05", "duracao": "6:53" },
+            { "videoId": "-asV4zAmI0k", "titulo": "Java | Operações com 2 números (outra solução) | sequencial | Lista 03.2 Q05", "duracao": "4:24" },
+            { "videoId": "R5bxbLef_Os", "titulo": "Java | Salário de vendedor com comissão | sequencial | Lista 03.2 Q06", "duracao": "10:12" },
+            { "videoId": "TIGfVC2HuHQ", "titulo": "Java | Valor das prestações de uma compra em 10x | sequencial | Lista 03.2 Q07", "duracao": "4:28" },
+            { "videoId": "mZ-ydVfhE40", "titulo": "Java | Preço de venda com percentual de lucro | sequencial | Lista 03.2 Q08", "duracao": "5:57" },
+            { "videoId": "Idlw-Uiz9UY", "titulo": "Java | Converter idade em dias | sequencial | Lista 03.2 Q09", "duracao": "6:52" },
+            { "videoId": "cHSvq1bg7Ww", "titulo": "Java | Percentual de votos brancos, nulos e válidos | sequencial | Lista 03.2 Q10", "duracao": "11:28" }
+          ]
+        },
+        {
+          "titulo": "Lista 03.3 · Programação sequencial",
+          "playlistId": "PLIn2kYkmuf4036ztktLckSh3wfe4BYqM1",
+          "aulas": [
+            { "videoId": "1-VvkWYotuE", "titulo": "Java | Área do círculo | sequencial | Lista 03.3 Q01", "duracao": "7:35" },
+            { "videoId": "L-5n6l_Xbzo", "titulo": "Java | Salário líquido de professor | sequencial | Lista 03.3 Q02", "duracao": "9:23" },
+            { "videoId": "kLMSv9P02zU", "titulo": "Java | Acréscimo de 30% e desconto de 25% | sequencial | Lista 03.3 Q03", "duracao": "4:52" },
+            { "videoId": "YykY25QROeQ", "titulo": "Java | Média ponderada de 4 números | sequencial | Lista 03.3 Q04", "duracao": "6:21" },
+            { "videoId": "VIhrZCaQgfk", "titulo": "Java | Volume de uma lata de óleo | sequencial | Lista 03.3 Q05", "duracao": "3:22" },
+            { "videoId": "2YjhUFaC28Y", "titulo": "Java | Trocar valores de duas variáveis | sequencial | Lista 03.3 Q06", "duracao": "6:55" },
+            { "videoId": "9qDZ_cFykBc", "titulo": "Java | Hipotenusa do triângulo retângulo | sequencial | Lista 03.3 Q07", "duracao": "4:02" },
+            { "videoId": "N2VedgSCwBw", "titulo": "Java | Perímetro e área do retângulo | sequencial | Lista 03.3 Q08", "duracao": "7:21" },
+            { "videoId": "G2_E81nxewc", "titulo": "Java | Termos de uma progressão aritmética (PA) | sequencial | Lista 03.3 Q09", "duracao": "6:43" },
+            { "videoId": "IqPI7-vP5o8", "titulo": "Java | Termos de uma progressão geométrica (PG) | sequencial | Lista 03.3 Q10", "duracao": "7:30" }
+          ]
+        },
+        {
+          "titulo": "Lista 04.1 · Estrutura de decisão if-else",
+          "playlistId": "PLIn2kYkmuf40PA60bTrTUOhMn-ie9samZ",
+          "aulas": [
+            { "videoId": "yh6lyjOh06E", "titulo": "Java | Exibir a metade se o número for maior que 20 | if-else | Lista 04.1 Q01", "duracao": "8:28" },
+            { "videoId": "vCZFUUBlnGM", "titulo": "Java | Quiz: qual é a capital do Brasil | if-else | Lista 04.1 Q02", "duracao": "4:46" },
+            { "videoId": "kYqSCzUgmyQ", "titulo": "Java | Quiz: qual é a capital do Brasil (outra solução) | if-else | Lista 04.1 Q02", "duracao": "4:47" },
+            { "videoId": "np5aGW_fbW4", "titulo": "Java | Número par ou ímpar | if-else | Lista 04.1 Q03", "duracao": "6:13" },
+            { "videoId": "5efNWE6Ghhg", "titulo": "Java | Número divisível por 4 e por 5 | if-else | Lista 04.1 Q04", "duracao": "7:25" },
+            { "videoId": "CqvULDjmnYE", "titulo": "Java | Média de 4 notas: aprovado ou reprovado | if-else | Lista 04.1 Q05", "duracao": "7:27" },
+            { "videoId": "n62T9R5H5J8", "titulo": "Java | Diferença entre o maior e o menor valor | if-else | Lista 04.1 Q06", "duracao": "4:36" },
+            { "videoId": "4h-Y2dozCrE", "titulo": "Java | Módulo (valor absoluto) de um número | if-else | Lista 04.1 Q07", "duracao": "4:50" },
+            { "videoId": "WxR1Uq2sp48", "titulo": "Java | Número na faixa de 1 a 10 | if-else | Lista 04.1 Q08", "duracao": "4:19" },
+            { "videoId": "bfal_6rodNI", "titulo": "Java | Número positivo, negativo ou nulo | if-else | Lista 04.1 Q09", "duracao": "10:09" },
+            { "videoId": "ERRibjbr088", "titulo": "Java | Verificar se um número é divisor de outro | if-else | Lista 04.1 Q10", "duracao": "4:34" },
+            { "videoId": "xpS_Rtv_z34", "titulo": "Java | Algarismo das centenas | if-else | Lista 04.1 Q11", "duracao": "9:42" },
+            { "videoId": "5-blWHmgGDY", "titulo": "Java | Maior e menor de 5 números | if-else | Lista 04.1 Q12", "duracao": "10:17" },
+            { "videoId": "3GV0R3xMuW0", "titulo": "Java | Ordenar 3 números em ordem crescente | if-else | Lista 04.1 Q13", "duracao": "14:45" }
+          ]
+        },
+        {
+          "titulo": "Lista 05.1 · Laço while",
+          "playlistId": "PLIn2kYkmuf43mbnqgbjmrmhnQlxgq4gzI",
+          "aulas": [
+            { "videoId": "gv4RmIvQ2Cg", "titulo": "Java | Exibir números de 1 a 100 | while | Lista 05.1 Q01", "duracao": "13:41" },
+            { "videoId": "xT3ywP_YB9E", "titulo": "Java | Contagem regressiva de 100 a 1 | while | Lista 05.1 Q02", "duracao": "6:52" },
+            { "videoId": "Rp_Tz4tCx_I", "titulo": "Java | Quadrados dos números de 15 a 200 | while | Lista 05.1 Q03", "duracao": "6:54" },
+            { "videoId": "fcRwMZVebBQ", "titulo": "Java | Soma dos 100 primeiros números | while | Lista 05.1 Q04", "duracao": "14:33" },
+            { "videoId": "WnCHjyQ3Arc", "titulo": "Java | Tabuada de um número | while | Lista 05.1 Q05", "duracao": "6:40" },
+            { "videoId": "OkwYtRcwvHg", "titulo": "Java | Multiplicação sucessiva por 3 até 250 | while | Lista 05.1 Q06", "duracao": "10:16" },
+            { "videoId": "qHaAsS9Qkys", "titulo": "Java | Múltiplos de 4 menores que 200 | while | Lista 05.1 Q07", "duracao": "5:17" },
+            { "videoId": "rwTsJt1YWbA", "titulo": "Java | Números ímpares de 0 a 20 | while | Lista 05.1 Q08", "duracao": "4:28" },
+            { "videoId": "DmfoPvBv9-s", "titulo": "Java | Soma dos pares de 0 a 500 | while | Lista 05.1 Q09", "duracao": "5:42" },
+            { "videoId": "pxNb7mIAOYo", "titulo": "Java | Potências de 3 com Math.pow | while | Lista 05.1 Q10", "duracao": "6:33" },
+            { "videoId": "_guZpbGOMmI", "titulo": "Java | Potências de 3 sem Math.pow | while | Lista 05.1 Q10", "duracao": "8:42" },
+            { "videoId": "2v9nxVijZ60", "titulo": "Java | Potência com base e expoente informados | while | Lista 05.1 Q11", "duracao": "10:14" },
+            { "videoId": "wHkbz1AsL8g", "titulo": "Java | Maior, menor e média de vários números | while | Lista 05.1 Q12", "duracao": "24:46" },
+            { "videoId": "IPuG1qtfZDg", "titulo": "Java | Tabuadas de 3 a 6 | while | Lista 05.1 Q13", "duracao": "9:22" },
+            { "videoId": "H994Hx3cOdE", "titulo": "Java | Fatorial de 5 | while | Lista 05.1 Q14", "duracao": "4:43" },
+            { "videoId": "1K4St2G4vTU", "titulo": "Java | Série de Fibonacci | while | Lista 05.1 Q15", "duracao": "9:34" }
+          ]
+        },
+        {
+          "titulo": "Lista 05.2 · Laço do-while",
+          "playlistId": "PLIn2kYkmuf41J3jBOE1oCo260s40eZK4A",
+          "aulas": [
+            { "videoId": "EStdtvZxfko", "titulo": "Java | Números pares de 100 a 200 | do-while | Lista 05.2 Q01", "duracao": "11:11" },
+            { "videoId": "UWcJevDdJgk", "titulo": "Java | Soma dos pares de 0 a 500 | do-while | Lista 05.2 Q02", "duracao": "9:16" },
+            { "videoId": "74FsgpOeqa8", "titulo": "Java | Soma dos 5 primeiros números | do-while | Lista 05.2 Q03", "duracao": "5:21" },
+            { "videoId": "s-Ws9dkO34k", "titulo": "Java | Tabuada de um número | do-while | Lista 05.2 Q04", "duracao": "4:50" },
+            { "videoId": "rMttkEBo8DY", "titulo": "Java | Múltiplos de 4 menores que 20 | do-while | Lista 05.2 Q05", "duracao": "3:52" },
+            { "videoId": "k0tt0Dpv-HA", "titulo": "Java | Quadrados dos números de 2 a 50 | do-while | Lista 05.2 Q06", "duracao": "4:24" },
+            { "videoId": "khXxcY-lXyY", "titulo": "Java | Potências de 2 de 0 a 10 | do-while | Lista 05.2 Q07", "duracao": "3:36" },
+            { "videoId": "faxXpe7_Mtw", "titulo": "Java | Potência com base e expoente informados | do-while | Lista 05.2 Q08", "duracao": "8:48" },
+            { "videoId": "qfu3hYBSfl4", "titulo": "Java | Série de Fibonacci | do-while | Lista 05.2 Q09", "duracao": "8:44" },
+            { "videoId": "KbCJAivOvLQ", "titulo": "Java | Série de Ricci | do-while | Lista 05.2 Q10", "duracao": "4:12" }
+          ]
+        },
+        {
+          "titulo": "Lista 05.3 · Laço for",
+          "playlistId": "PLIn2kYkmuf422qcDJDCuF7gdwHcrFeh6m",
+          "aulas": [
+            { "videoId": "aRQuMWgm8yw", "titulo": "Java | Números ímpares de 1000 a 1500 | for | Lista 05.3 Q01", "duracao": "9:24" },
+            { "videoId": "lfDjlUzf_rc", "titulo": "Java | Soma de 1 até N | for | Lista 05.3 Q02", "duracao": "5:49" },
+            { "videoId": "LVCN3cTWMvk", "titulo": "Java | Tabuada de um número | for | Lista 05.3 Q03", "duracao": "4:17" },
+            { "videoId": "sVm3lrBptFA", "titulo": "Java | Múltiplos de 5 menores que 50 | for | Lista 05.3 Q04", "duracao": "3:37" },
+            { "videoId": "mmRkbQUh9uE", "titulo": "Java | Potências de 2 de 0 a 10 | for | Lista 05.3 Q05", "duracao": "3:28" },
+            { "videoId": "alHaozT-4mg", "titulo": "Java | Potência com base e expoente informados | for | Lista 05.3 Q06", "duracao": "7:40" },
+            { "videoId": "jOK3g5QG-7Y", "titulo": "Java | Soma dos pares de 3 a 21 | for | Lista 05.3 Q07", "duracao": "4:58" },
+            { "videoId": "-rH6zmHVR_4", "titulo": "Java | Homens com 21 anos ou mais entre 20 pessoas | for | Lista 05.3 Q08", "duracao": "8:32" },
+            { "videoId": "79mvZJ_VsLU", "titulo": "Java | Múltiplos de 3 e 5 até N | for | Lista 05.3 Q09", "duracao": "5:13" },
+            { "videoId": "QKcnt1gfjvE", "titulo": "Java | Fatorial de um número | for | Lista 05.3 Q10", "duracao": "5:26" },
+            { "videoId": "sdl9QKHeN8Q", "titulo": "Java | Triangulação de matriz de ordem 10 | for | Lista 05.3 Q11", "duracao": "25:35" },
+            { "videoId": "NHsLcMPXdVo", "titulo": "Java | Elementos acima da diagonal principal | for | Lista 05.3 Q12", "duracao": "6:28" },
+            { "videoId": "kVmtrY2RoTc", "titulo": "Java | Tabela de polegadas para centímetros | for | Lista 05.3 Q13", "duracao": "5:31" },
+            { "videoId": "AmAjaqRoTs8", "titulo": "Java | Notas e média de 15 alunos | for | Lista 05.3 Q14", "duracao": "12:00" },
+            { "videoId": "A_xG1gvAuTs", "titulo": "Java | Desconto do imposto de renda de 10 pessoas | for | Lista 05.3 Q15", "duracao": "12:32" }
+          ]
+        },
+        {
+          "titulo": "Lista 06.1 · switch-case",
+          "playlistId": "PLIn2kYkmuf41bUz5DFfk7S-NFgr1e_CVn",
+          "aulas": [
+            { "videoId": "HFqb7dm-nnU", "titulo": "Java | Menu de opções | switch-case | Lista 06.1 Q01", "duracao": "14:24" },
+            { "videoId": "jZY-G-FXllI", "titulo": "Java | Orientação de banheiro pelo sexo | switch-case | Lista 06.1 Q02", "duracao": "9:26" },
+            { "videoId": "CB_-Abqu61M", "titulo": "Java | Número par ou ímpar | switch-case | Lista 06.1 Q03", "duracao": "5:55" },
+            { "videoId": "03r7KK4FSH8", "titulo": "Java | Gentílico pela sigla do estado | switch-case | Lista 06.1 Q04", "duracao": "3:52" },
+            { "videoId": "U6CYdo68Ne8", "titulo": "Java | Nome do mês pelo número | switch-case | Lista 06.1 Q05", "duracao": "4:14" },
+            { "videoId": "9tCasdu-in4", "titulo": "Java | Peso em outros planetas | switch-case | Lista 06.1 Q06", "duracao": "14:54" },
+            { "videoId": "94pJ0yxsjHI", "titulo": "Java | Calculadora com menu de operações | switch-case | Lista 06.1 Q07", "duracao": "12:42" }
+          ]
+        },
+        {
+          "titulo": "Lista 07.1 · Vetores (arrays)",
+          "playlistId": "PLIn2kYkmuf43-eEQPwdOVix22Yb1-EiAi",
+          "aulas": [
+            { "videoId": "unWYdObMzyc", "titulo": "Java | Nome e profissão de 5 pessoas | vetor | Lista 07.1 Q01", "duracao": "11:06" },
+            { "videoId": "4cA9JHEglUo", "titulo": "Java | Soma dos elementos | vetor | Lista 07.1 Q02", "duracao": "8:06" },
+            { "videoId": "RIMxHNcxld4", "titulo": "Java | Soma dos elementos ímpares | vetor | Lista 07.1 Q03", "duracao": "5:56" },
+            { "videoId": "cqFBls2eY5s", "titulo": "Java | Multiplicar os elementos por 3 | vetor | Lista 07.1 Q04", "duracao": "7:18" },
+            { "videoId": "pWzmCx30Y2g", "titulo": "Java | Quadrado dos elementos | vetor | Lista 07.1 Q05", "duracao": "5:56" },
+            { "videoId": "H6AwJXgxxDo", "titulo": "Java | Inverter um vetor | vetor | Lista 07.1 Q06", "duracao": "9:29" },
+            { "videoId": "-Wsd8LHOahw", "titulo": "Java | Dia da semana pelo número | vetor | Lista 07.1 Q07", "duracao": "7:24" },
+            { "videoId": "lqmpDXj7-t4", "titulo": "Java | Média e situação de 15 alunos | vetor | Lista 07.1 Q08", "duracao": "12:51" },
+            { "videoId": "ykh_R-w6um0", "titulo": "Java | Pesquisar um nome | vetor | Lista 07.1 Q09", "duracao": "23:38" },
+            { "videoId": "0rLPiqZpYLM", "titulo": "Java | Agenda com nome, telefone e endereço | vetor | Lista 07.1 Q10", "duracao": "12:44" },
+            { "videoId": "-JFiFiL6cVE", "titulo": "Java | Maior, menor e média de 10 números | vetor | Lista 07.1 Q11", "duracao": "13:08" },
+            { "videoId": "5tBsl9-Gjy0", "titulo": "Java | Números repetidos entre 2 vetores | vetor | Lista 07.1 Q12", "duracao": "15:19" },
+            { "videoId": "Eb0dm7_I4Pc", "titulo": "Java | Reajuste de salário de 20 pessoas | vetor | Lista 07.1 Q13", "duracao": "10:37" },
+            { "videoId": "HXf2MQ-e3h8", "titulo": "Java | Fatorial de cada elemento | vetor | Lista 07.1 Q14", "duracao": "14:22" },
+            { "videoId": "EBRZRCcJCpQ", "titulo": "Java | Ordenar em ordem decrescente | vetor | Lista 07.1 Q15", "duracao": "19:48" }
+          ]
+        },
+        {
+          "titulo": "Lista 08.1 · Matrizes (arrays bidimensionais)",
+          "playlistId": "PLIn2kYkmuf40JQZbWsIATCCGtBgqTWD26",
+          "aulas": [
+            { "videoId": "EFtmyieHbfw", "titulo": "Java | Preencher e exibir uma matriz 5x3 | matriz | Lista 08.1 Q01", "duracao": "18:17" },
+            { "videoId": "U62Ftjh68bY", "titulo": "Java | Soma dos elementos | matriz | Lista 08.1 Q02", "duracao": "11:46" },
+            { "videoId": "cZKruc_tXYI", "titulo": "Java | Soma dos números pares | matriz | Lista 08.1 Q03", "duracao": "9:55" },
+            { "videoId": "x5zTTq7ILpY", "titulo": "Java | Média dos elementos | matriz | Lista 08.1 Q04", "duracao": "10:41" },
+            { "videoId": "pMbxMdAMRUw", "titulo": "Java | Buscar nome por linha e coluna | matriz | Lista 08.1 Q05", "duracao": "20:08" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "java-poo-metodos",
+      "titulo": "Orientação a Objetos em Java: Métodos",
+      "categoria": "Java",
+      "status": "publicado",
+      "descricao": "Um projeto em Java que explica em detalhes todas as funcionalidades que os métodos permitem.",
+      "playlistId": "PLIn2kYkmuf426fuLF-tZDqVrBZyFf8OkC",
+      "modulos": [
+        {
+          "titulo": "Projeto Carro",
+          "aulas": [
+            { "videoId": "lY0rmLK1JSM", "titulo": "Java | Construtores, getters e setters | POO Métodos | Carro 01", "duracao": "12:21" },
+            { "videoId": "jH_mwSUKuRg", "titulo": "Java | Construtor personalizado | POO Métodos | Carro 02", "duracao": "13:34" },
+            { "videoId": "D7YhkUjl0P8", "titulo": "Java | Método void: detalhes() | POO Métodos | Carro 03", "duracao": "8:44" },
+            { "videoId": "tKc0_WGm-jY", "titulo": "Java | Método com retorno String: situacaoMotor() | POO Métodos | Carro 04", "duracao": "18:41" },
+            { "videoId": "wCm4grI12w8", "titulo": "Java | Método que altera atributo: ligarMotor() | POO Métodos | Carro 05", "duracao": "8:45" },
+            { "videoId": "WE8snrmN4Pw", "titulo": "Java | Várias condições com return: desligarMotor() | POO Métodos | Carro 06", "duracao": "9:37" },
+            { "videoId": "S9RQ7yqotaA", "titulo": "Java | Método com parâmetro: acelerar(int valor) | POO Métodos | Carro 07", "duracao": "11:44" },
+            { "videoId": "wsCjS-c5HCM", "titulo": "Java | Parâmetro e várias condições: frear(int valor) | POO Métodos | Carro 08", "duracao": "14:48" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "banco-de-dados",
+      "titulo": "Banco de Dados",
+      "categoria": "Banco de Dados",
+      "status": "em-producao",
+      "descricao": "Modelagem de Dados e a estrutura do Banco de Dados Relacional em SQL.",
+      "playlistId": "PLIn2kYkmuf40_SlF596LSiQtApFMtXNSM",
+      "modulos": [
+        {
+          "titulo": "Fundamentos",
+          "aulas": [
+            { "videoId": "yj_9oHUHOJI", "titulo": "Banco de Dados - Modelos Conceitual, Lógico e Físico.", "duracao": "1:37:12" },
+            { "videoId": "wNSsZsr1yEk", "titulo": "Download e Instalação do MySQL com Workbench", "duracao": "9:54" }
+          ]
+        }
+      ]
+    }
+  ]
+}

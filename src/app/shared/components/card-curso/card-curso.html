@@ -1,0 +1,32 @@
+<a class="card" [routerLink]="['/cursos', curso().slug]">
+  <app-capa-curso [categoria]="curso().categoria" />
+  <div class="corpo">
+    <div class="topo">
+      <span class="categoria">{{ curso().categoria }}</span>
+      <app-selo-situacao [situacao]="situacao()" />
+    </div>
+    <h3>{{ curso().titulo }}</h3>
+    <p class="descricao">{{ curso().descricao }}</p>
+
+    @if (matriculado()) {
+      <div class="andamento">
+        <div class="progresso" [style.--valor]="progresso().percentual + '%'"></div>
+        <span>{{ progresso().percentual }}% concluído</span>
+      </div>
+    } @else {
+      <p class="meta">
+        @switch (situacao()) {
+          @case ('em-breve') {
+            {{ totalAulas() }} aulas com estreia programada
+          }
+          @case ('estreias') {
+            {{ liberadas().length }} de {{ totalAulas() }} aulas no ar
+          }
+          @default {
+            {{ totalAulas() }} {{ totalAulas() === 1 ? 'aula' : 'aulas' }}, {{ duracao() | duracao: 'duração a definir' }}
+          }
+        }
+      </p>
+    }
+  </div>
+</a>

@@ -1,0 +1,201 @@
+@use '@angular/material' as mat;
+
+// ---------------------------------------------------------------------------
+// Tokens de design da Academia Dev
+// Conceito: "caderno de estudos" — papel frio, tinta azul-escura e marca-texto.
+// ---------------------------------------------------------------------------
+:root {
+  --tinta: #18233d;
+  --tinta-suave: #4a5672;
+  --papel: #f4f6fa;
+  --folha: #ffffff;
+  --pauta: #dce2ec;
+  --margem: #e8a2a2;
+  --marca-texto: #ffe14d;
+  --marca-texto-forte: #f5c400;
+
+  --cor-python: #2f6db3;
+  --cor-java: #c9561f;
+  --cor-bd: #0f7d74;
+
+  --sucesso: #1f7a4d;
+  --alerta: #9a4b00;
+
+  --fonte-titulo: 'Bricolage Grotesque', system-ui, sans-serif;
+  --fonte-texto: 'Atkinson Hyperlegible Next', system-ui, sans-serif;
+
+  --raio-p: 6px;
+  --raio-m: 12px;
+  --raio-g: 20px;
+  --sombra-folha: 0 1px 0 var(--pauta), 0 8px 24px -12px rgb(24 35 61 / 0.25);
+  --largura-max: 1180px;
+  --gutter: clamp(16px, 4vw, 40px);
+}
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$blue-palette,
+        tertiary: mat.$yellow-palette,
+        theme-type: light,
+      ),
+      typography: (
+        plain-family: 'Atkinson Hyperlegible Next',
+        brand-family: 'Bricolage Grotesque',
+        bold-weight: 700,
+        medium-weight: 500,
+        regular-weight: 400,
+      ),
+      density: 0,
+    )
+  );
+
+  @include mat.theme-overrides(
+    (
+      primary: #18233d,
+      on-primary: #ffffff,
+      primary-container: #dfe6f5,
+      on-primary-container: #18233d,
+      surface: #f4f6fa,
+      on-surface: #18233d,
+      on-surface-variant: #4a5672,
+      surface-container: #ffffff,
+      surface-container-low: #ffffff,
+      surface-container-high: #eef1f7,
+      outline: #9aa5bd,
+      outline-variant: #dce2ec,
+      corner-medium: 12px,
+    )
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color-scheme: light;
+  background-color: var(--papel);
+  color: var(--tinta);
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.5em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 4.6vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+}
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1em;
+  max-width: 68ch;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--marca-texto-forte);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.material-symbols-rounded {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+// Container padrão das páginas
+.pagina {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin-inline: auto;
+  padding: clamp(24px, 5vw, 56px) var(--gutter);
+}
+
+.texto-suave {
+  color: var(--tinta-suave);
+}
+
+.visualmente-oculto {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+// Barra de progresso em "marca-texto" (reutilizada em vários componentes)
+.progresso {
+  --valor: 0%;
+  height: 10px;
+  border-radius: 99px;
+  background: var(--pauta);
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: var(--valor);
+    background: var(--marca-texto-forte);
+    border-radius: inherit;
+    transition: width 400ms ease;
+  }
+}
+
+// Ajustes finos de componentes Material
+.mat-mdc-snack-bar-container {
+  --mdc-snackbar-container-color: var(--tinta);
+  --mat-snack-bar-button-color: var(--marca-texto);
+}
+
+.mat-mdc-unelevated-button.mat-primary,
+.mat-mdc-outlined-button {
+  --mat-button-filled-container-shape: 10px;
+  --mat-button-outlined-container-shape: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

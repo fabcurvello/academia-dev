@@ -1,0 +1,91 @@
+<div class="pagina">
+  @if (curso(); as curso) {
+    <div class="layout">
+      <section class="formulario">
+        <a class="voltar" [routerLink]="['/cursos', curso.slug]">Voltar para o curso</a>
+        <h1>Matrícula</h1>
+
+        @if (jaMatriculado()) {
+          <div class="aviso">
+            <p>Você já está matriculado em {{ curso.titulo }}.</p>
+            <a mat-flat-button [routerLink]="['/cursos', curso.slug]">Ir para o curso</a>
+          </div>
+        } @else {
+          <p class="texto-suave">É gratuito. Essas respostas ajudam a montar sua área de estudos.</p>
+
+          <form [formGroup]="form" (ngSubmit)="confirmar()" novalidate>
+            <fieldset>
+              <legend>Seus dados</legend>
+              <mat-form-field appearance="outline">
+                <mat-label>Nome completo</mat-label>
+                <input matInput formControlName="nome" autocomplete="name" />
+                @if (form.controls.nome.hasError('required')) {
+                  <mat-error>Informe seu nome.</mat-error>
+                } @else if (form.controls.nome.hasError('nomeCompleto')) {
+                  <mat-error>Informe nome e sobrenome.</mat-error>
+                }
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input matInput type="email" formControlName="email" autocomplete="email" />
+                @if (form.controls.email.hasError('required')) {
+                  <mat-error>Informe seu e-mail.</mat-error>
+                } @else if (form.controls.email.hasError('email')) {
+                  <mat-error>Use um e-mail válido, como nome&#64;exemplo.com.</mat-error>
+                }
+              </mat-form-field>
+            </fieldset>
+
+            <fieldset>
+              <legend>Seu objetivo</legend>
+              <mat-form-field appearance="outline">
+                <mat-label>Por que você quer fazer este curso?</mat-label>
+                <mat-select formControlName="objetivo">
+                  @for (o of objetivos; track o.valor) {
+                    <mat-option [value]="o.valor">{{ o.texto }}</mat-option>
+                  }
+                </mat-select>
+                <mat-error>Escolha um objetivo.</mat-error>
+              </mat-form-field>
+            </fieldset>
+
+            <fieldset>
+              <legend>Ritmo de estudo</legend>
+              <mat-radio-group formControlName="ritmo" class="ritmos" aria-label="Ritmo de estudo">
+                @for (r of ritmos; track r.valor) {
+                  <mat-radio-button [value]="r.valor">
+                    <strong>{{ r.titulo }}</strong>
+                    <span class="texto-suave">{{ r.texto }}</span>
+                  </mat-radio-button>
+                }
+              </mat-radio-group>
+            </fieldset>
+
+            <mat-checkbox formControlName="aceite">
+              Entendo que as aulas são vídeos do YouTube e que meu progresso fica salvo neste navegador.
+            </mat-checkbox>
+            @if (form.controls.aceite.touched && form.controls.aceite.invalid) {
+              <p class="erro-aceite" role="alert">Marque a caixa acima para confirmar a matrícula.</p>
+            }
+
+            <div class="botoes">
+              <button mat-flat-button type="submit" [disabled]="enviando()">Confirmar matrícula</button>
+              <a mat-button [routerLink]="['/cursos', curso.slug]">Cancelar</a>
+            </div>
+          </form>
+        }
+      </section>
+
+      <aside class="resumo" aria-label="Resumo do curso">
+        <app-capa-curso [categoria]="curso.categoria" />
+        <h2>{{ curso.titulo }}</h2>
+        <p class="texto-suave">{{ curso.modulos.length }} módulos e {{ totalAulas() }} aulas</p>
+        <p class="preco">Gratuito</p>
+      </aside>
+    </div>
+  } @else if (cursos.carregado()) {
+    <h1>Curso não encontrado</h1>
+    <a mat-flat-button routerLink="/cursos">Ver os cursos</a>
+  }
+</div>

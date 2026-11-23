@@ -1,0 +1,47 @@
+.intro {
+  margin-bottom: 28px;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.campo-busca {
+  flex: 1 1 320px;
+}
+
+.campo-ordem {
+  flex: 0 1 220px;
+}
+
+.chips {
+  margin-top: 16px;
+}
+
+.resumo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  margin: 16px 0;
+  font-weight: 700;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.vazio {
+  padding: 40px;
+  border: 2px dashed var(--pauta);
+  border-radius: var(--raio-g);
+  text-align: center;
+
+  p {
+    margin-inline: auto;
+  }
+}

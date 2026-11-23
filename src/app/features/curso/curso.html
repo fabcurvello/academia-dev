@@ -1,0 +1,131 @@
+@if (curso(); as curso) {
+  <section class="topo">
+    <div class="pagina topo-conteudo">
+      <div class="info">
+        <nav class="trilha-nav" aria-label="Você está em">
+          <a routerLink="/cursos">Cursos</a>
+          <span aria-hidden="true">/</span>
+          <a routerLink="/cursos" [queryParams]="{ categoria: curso.categoria }">{{ curso.categoria }}</a>
+        </nav>
+        <h1>{{ curso.titulo }}</h1>
+        <p class="descricao">{{ curso.descricao }}</p>
+
+        <ul class="fatos">
+          <li><app-selo-situacao [situacao]="situacao()" /></li>
+          <li>{{ curso.modulos.length }} {{ curso.modulos.length === 1 ? 'módulo' : 'módulos' }}</li>
+          <li>{{ totalAulas() }} aulas</li>
+          @if (duracao()) {
+            <li>{{ duracao() | duracao }} de vídeo publicado</li>
+          }
+        </ul>
+
+        <div class="acao">
+          @if (matriculado()) {
+            @if (progresso(); as p) {
+              <div class="andamento">
+                <div class="progresso" [style.--valor]="p.percentual + '%'"></div>
+                <span>{{ p.concluidas }} de {{ p.total }} aulas liberadas concluídas</span>
+              </div>
+            }
+            @if (proximaAula(); as videoId) {
+              <a mat-flat-button [routerLink]="['aula', videoId]">
+                {{ progresso()?.concluidas ? 'Continuar curso' : 'Começar a primeira aula' }}
+              </a>
+            } @else {
+              <p class="texto-suave">Você está matriculado. A primeira aula fica disponível na estreia.</p>
+            }
+          } @else {
+            <a mat-flat-button [routerLink]="['matricula']">Matricular-se grátis</a>
+            @if (!auth.logado()) {
+              <span class="texto-suave dica">Você vai precisar entrar na sua conta.</span>
+            }
+          }
+        </div>
+      </div>
+      <app-capa-curso [categoria]="curso.categoria" class="capa" />
+    </div>
+  </section>
+
+  <div class="pagina corpo">
+    @if (proximaEstreia(); as aula) {
+      <aside class="estreia" aria-labelledby="titulo-estreia">
+        <div>
+          <h2 id="titulo-estreia">Próxima aula estreia em</h2>
+          <p>
+            <strong>{{ aula.titulo | tituloAula }}</strong>
+            <span class="texto-suave">, {{ estreiaEm(aula.estreia) | date: "EEEE, d 'de' MMMM 'às' HH'h'" }}</span>
+          </p>
+        </div>
+        <app-contagem-regressiva [alvo]="estreiaEm(aula.estreia)" />
+      </aside>
+    }
+
+    <section aria-labelledby="titulo-conteudo">
+      <div class="conteudo-topo">
+        <h2 id="titulo-conteudo">Conteúdo do curso</h2>
+        @if (curso.playlistId) {
+          <a [href]="'https://www.youtube.com/playlist?list=' + curso.playlistId" target="_blank" rel="noopener">
+            Playlist no YouTube
+          </a>
+        }
+      </div>
+
+      <mat-accordion multi class="modulos">
+        @for (modulo of curso.modulos; track modulo.titulo; let primeiro = $first) {
+          <mat-expansion-panel [expanded]="primeiro">
+            <mat-expansion-panel-header>
+              <mat-panel-title>{{ modulo.titulo }}</mat-panel-title>
+              <mat-panel-description>
+                @if (aulasLiberadasNoModulo(modulo) === 0 && modulo.aulas[0].estreia) {
+                  Estreia em {{ estreiaEm(modulo.aulas[0].estreia) | date: "d 'de' MMMM" }}
+                } @else if (aulasLiberadasNoModulo(modulo) < modulo.aulas.length) {
+                  {{ aulasLiberadasNoModulo(modulo) }} de {{ modulo.aulas.length }} aulas no ar
+                } @else {
+                  {{ modulo.aulas.length }} {{ modulo.aulas.length === 1 ? 'aula' : 'aulas' }}, {{ duracaoModulo(modulo) | duracao }}
+                }
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <ol class="aulas">
+              @for (aula of modulo.aulas; track aula.videoId) {
+                @let liberada = cursos.aulaLiberada(aula);
+                @let concluida = matriculas.concluida(curso.slug, aula.videoId);
+                <li [class.bloqueada]="!liberada" [class.concluida]="concluida">
+                  <span class="icone" aria-hidden="true">
+                    <mat-icon fontSet="material-symbols-rounded">
+                      {{ !liberada ? 'schedule' : concluida ? 'check_circle' : 'play_circle' }}
+                    </mat-icon>
+                  </span>
+                  @if (liberada && matriculado()) {
+                    <a class="nome" [routerLink]="['aula', aula.videoId]">{{ aula.titulo | tituloAula }}</a>
+                  } @else {
+                    <span class="nome">{{ aula.titulo | tituloAula }}</span>
+                  }
+                  <span class="codigo">{{ aula.titulo | tituloAula: 'codigo' }}</span>
+                  <span class="tempo">
+                    @if (liberada) {
+                      {{ aula.duracao | duracao }}
+                    } @else {
+                      {{ estreiaEm(aula.estreia) | date: "dd/MM 'às' HH'h'" }}
+                    }
+                  </span>
+                  @if (concluida) {
+                    <span class="visualmente-oculto">(concluída)</span>
+                  }
+                </li>
+              }
+            </ol>
+          </mat-expansion-panel>
+        }
+      </mat-accordion>
+    </section>
+  </div>
+} @else if (cursos.carregado()) {
+  <div class="pagina nao-encontrado">
+    <h1>Curso não encontrado</h1>
+    <p class="texto-suave">O endereço pode ter mudado. Veja a lista completa de cursos.</p>
+    <a mat-flat-button routerLink="/cursos">Ver os cursos</a>
+  </div>
+} @else {
+  <div class="pagina"><p class="texto-suave">Carregando curso…</p></div>
+}

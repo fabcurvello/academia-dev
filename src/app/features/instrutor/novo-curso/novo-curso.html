@@ -1,0 +1,129 @@
+<div class="pagina">
+  <a class="voltar" routerLink="/instrutor">Painel do instrutor</a>
+  <h1>Criar curso</h1>
+  <p class="texto-suave">
+    Monte o curso com módulos e aulas do YouTube. Ele fica salvo neste navegador e aparece no catálogo com o selo "Em produção".
+  </p>
+
+  <div class="layout">
+    <form [formGroup]="form" (ngSubmit)="salvar()" novalidate>
+      <section class="bloco">
+        <h2>Informações</h2>
+        <mat-form-field appearance="outline">
+          <mat-label>Título</mat-label>
+          <input matInput formControlName="titulo" />
+          @if (form.controls.titulo.hasError('required')) {
+            <mat-error>Dê um título ao curso.</mat-error>
+          } @else if (form.controls.titulo.hasError('minlength')) {
+            <mat-error>Use pelo menos 5 caracteres.</mat-error>
+          }
+        </mat-form-field>
+
+        <div class="linha">
+          <mat-form-field appearance="outline">
+            <mat-label>Endereço (slug)</mat-label>
+            <span matTextPrefix>/cursos/</span>
+            <input matInput formControlName="slug" />
+            @if (form.controls.slug.pending) {
+              <mat-hint>Verificando disponibilidade…</mat-hint>
+            }
+            @if (form.controls.slug.hasError('slugEmUso')) {
+              <mat-error>Já existe um curso com esse endereço.</mat-error>
+            } @else if (form.controls.slug.hasError('pattern')) {
+              <mat-error>Use letras minúsculas, números e hífens.</mat-error>
+            } @else if (form.controls.slug.hasError('required')) {
+              <mat-error>Informe o endereço.</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Linguagem</mat-label>
+            <mat-select formControlName="categoria">
+              @for (c of cursos.categorias; track c) {
+                <mat-option [value]="c">{{ c }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Descrição</mat-label>
+          <textarea matInput formControlName="descricao" rows="3" [maxlength]="limiteDescricao"></textarea>
+          <mat-hint align="end">{{ tamanhoDescricao() }} / {{ limiteDescricao }}</mat-hint>
+          <mat-error>Escreva uma descrição curta.</mat-error>
+        </mat-form-field>
+      </section>
+
+      <div formArrayName="modulos" class="modulos">
+        @for (modulo of modulos.controls; track modulo; let m = $index) {
+          <section class="bloco" [formGroupName]="m">
+            <div class="bloco-topo">
+              <h2>Módulo {{ m + 1 }}</h2>
+              @if (modulos.length > 1) {
+                <button mat-button type="button" (click)="removerModulo(m)">Remover módulo</button>
+              }
+            </div>
+            <mat-form-field appearance="outline">
+              <mat-label>Nome do módulo</mat-label>
+              <input matInput formControlName="titulo" />
+              <mat-error>Dê um nome ao módulo.</mat-error>
+            </mat-form-field>
+
+            <ol formArrayName="aulas" class="aulas">
+              @for (aula of aulasDo($any(modulo)).controls; track aula; let a = $index) {
+                <li [formGroupName]="a">
+                  <span class="numero" aria-hidden="true">{{ a + 1 }}</span>
+                  <mat-form-field appearance="outline" class="campo-titulo">
+                    <mat-label>Título da aula {{ a + 1 }}</mat-label>
+                    <input matInput formControlName="titulo" />
+                    <mat-error>Informe o título.</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="campo-video">
+                    <mat-label>Link do YouTube</mat-label>
+                    <input matInput formControlName="video" placeholder="https://youtu.be/…" />
+                    @if (aula.get('video')?.hasError('videoYoutube')) {
+                      <mat-error>Cole um link de vídeo do YouTube.</mat-error>
+                    } @else {
+                      <mat-error>Informe o vídeo.</mat-error>
+                    }
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="campo-duracao">
+                    <mat-label>Duração</mat-label>
+                    <input matInput formControlName="duracao" placeholder="12:30" />
+                    <mat-error>Use m:ss</mat-error>
+                  </mat-form-field>
+                  <button
+                    mat-icon-button
+                    type="button"
+                    [disabled]="aulasDo($any(modulo)).length === 1"
+                    (click)="removerAula($any(modulo), a)"
+                    [attr.aria-label]="'Remover aula ' + (a + 1)"
+                  >
+                    <mat-icon fontSet="material-symbols-rounded">close</mat-icon>
+                  </button>
+                </li>
+              }
+            </ol>
+            <button mat-stroked-button type="button" (click)="adicionarAula($any(modulo))">
+              <mat-icon fontSet="material-symbols-rounded">add</mat-icon>Adicionar aula
+            </button>
+          </section>
+        }
+      </div>
+
+      <div class="rodape-form">
+        <button mat-stroked-button type="button" (click)="adicionarModulo()">
+          <mat-icon fontSet="material-symbols-rounded">add</mat-icon>Adicionar módulo
+        </button>
+        <span class="espaco"></span>
+        <a mat-button routerLink="/instrutor">Cancelar</a>
+        <button mat-flat-button type="submit">Criar curso</button>
+      </div>
+    </form>
+
+    <aside class="previa" aria-label="Prévia do card no catálogo">
+      <h2>Prévia no catálogo</h2>
+      <app-card-curso [curso]="previa()" />
+    </aside>
+  </div>
+</div>

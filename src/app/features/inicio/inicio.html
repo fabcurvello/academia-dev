@@ -1,0 +1,101 @@
+<section class="abertura">
+  <div class="abertura-conteudo">
+    <div class="chamada">
+      <h1>Aprenda a programar com aulas que vão direto ao ponto.</h1>
+      <p class="lead">
+        Python, Java e Banco de Dados, do zero, com as videoaulas do professor Fabricio Curvello. Matricule-se de graça,
+        assista no seu ritmo e acompanhe o que já estudou.
+      </p>
+      <div class="acoes">
+        <a mat-flat-button routerLink="/cursos">Ver os cursos</a>
+        @if (!auth.logado()) {
+          <a mat-stroked-button routerLink="/login">Entrar</a>
+        }
+      </div>
+      @if (cursos.carregado()) {
+        <p class="numeros">
+          {{ stats().aulas }} aulas publicadas, somando {{ stats().horas }} horas de conteúdo.
+          @if (stats().programadas) {
+            Mais {{ stats().programadas }} já têm data de estreia.
+          }
+        </p>
+      }
+    </div>
+
+    @if (continuar(); as c) {
+      <aside class="destaque" aria-labelledby="titulo-continuar">
+        <h2 id="titulo-continuar" class="destaque-titulo">Continue de onde parou</h2>
+        <p class="destaque-curso">{{ c.curso.titulo }}</p>
+        <div class="progresso" [style.--valor]="c.progresso.percentual + '%'"></div>
+        <p class="texto-suave">{{ c.progresso.concluidas }} de {{ c.progresso.total }} aulas concluídas</p>
+        @if (c.videoId) {
+          <a mat-flat-button [routerLink]="['/cursos', c.curso.slug, 'aula', c.videoId]">Continuar assistindo</a>
+        }
+      </aside>
+    } @else if (estreia(); as e) {
+      <aside class="destaque" aria-labelledby="titulo-estreia">
+        <h2 id="titulo-estreia" class="destaque-titulo">Próxima estreia</h2>
+        <p class="destaque-curso">{{ e.curso.titulo }}</p>
+        <p class="destaque-aula">
+          {{ e.aula.titulo | tituloAula: 'codigo' }}: {{ e.aula.titulo | tituloAula }}
+        </p>
+        <app-contagem-regressiva [alvo]="e.data" />
+        <p class="texto-suave quando">{{ e.data | date: "EEEE, d 'de' MMMM 'às' HH'h'" }}</p>
+        <a mat-stroked-button [routerLink]="['/cursos', e.curso.slug]">Ver o calendário de aulas</a>
+      </aside>
+    }
+  </div>
+</section>
+
+<div class="pagina">
+  <section aria-labelledby="titulo-trilhas">
+    <h2 id="titulo-trilhas">Escolha por onde começar</h2>
+    <div class="trilhas">
+      @for (trilha of trilhas; track trilha.categoria) {
+        <a class="trilha" [class]="'trilha ' + trilha.categoria" [routerLink]="['/cursos']" [queryParams]="{ categoria: trilha.categoria }">
+          <strong>{{ trilha.categoria }}</strong>
+          <span>{{ trilha.texto }}</span>
+          <span class="qtd">
+            {{ contarCursos(trilha.categoria) }} {{ contarCursos(trilha.categoria) === 1 ? 'curso' : 'cursos' }}
+          </span>
+        </a>
+      }
+    </div>
+  </section>
+
+  <section aria-labelledby="titulo-cursos" class="secao-cursos">
+    <div class="secao-topo">
+      <h2 id="titulo-cursos">Todos os cursos</h2>
+      <a routerLink="/cursos" class="ver-todos">Buscar e filtrar</a>
+    </div>
+
+    @if (cursos.erro(); as erro) {
+      <div class="aviso-erro" role="alert">
+        <p>{{ erro }}</p>
+      </div>
+    } @else if (!cursos.carregado()) {
+      <div class="grade">
+        @for (i of [1, 2, 3]; track i) {
+          <div class="esqueleto" aria-hidden="true"></div>
+        }
+      </div>
+    } @else {
+      <div class="grade">
+        @for (curso of cursos.cursos(); track curso.slug) {
+          <app-card-curso [curso]="curso" />
+        }
+      </div>
+    }
+  </section>
+
+  <section class="professor" aria-labelledby="titulo-professor">
+    <div>
+      <h2 id="titulo-professor">Quem dá as aulas</h2>
+      <p>
+        Fabricio Curvello é desenvolvedor e professor de desenvolvimento de software nas Faculdades IBMR e no Senai. As
+        aulas nasceram da sala de aula: cada exercício resolvido aqui já foi dúvida de algum aluno.
+      </p>
+    </div>
+    <a mat-stroked-button [href]="cursos.canal()" target="_blank" rel="noopener">Abrir o canal no YouTube</a>
+  </section>
+</div>

@@ -1,0 +1,60 @@
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header>
+  <div class="barra">
+    <a class="marca" routerLink="/" aria-label="Academia Dev, página inicial">
+      <svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#18233d" />
+        <rect x="12" y="36" width="40" height="12" rx="3" fill="#ffe14d" />
+        <path d="M20 20l-8 8 8 8M44 20l8 8-8 8" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span>Academia Dev</span>
+    </a>
+
+    <nav class="links" aria-label="Principal">
+      <a routerLink="/cursos" routerLinkActive="ativo">Cursos</a>
+      @if (auth.logado()) {
+        <a routerLink="/minha-area" routerLinkActive="ativo">
+          Meus estudos
+          @if (matriculas.quantidade()) {
+            <span class="contador" aria-label="cursos matriculados">{{ matriculas.quantidade() }}</span>
+          }
+        </a>
+      }
+      @if (auth.ehInstrutor()) {
+        <a routerLink="/instrutor" routerLinkActive="ativo">Painel do instrutor</a>
+      }
+    </nav>
+
+    <div class="conta">
+      @if (auth.usuario(); as usuario) {
+        <button mat-button [matMenuTriggerFor]="menuConta" class="botao-conta">
+          <span class="avatar" aria-hidden="true">{{ usuario.nome[0] }}</span>
+          <span class="nome">{{ auth.primeiroNome() }}</span>
+        </button>
+        <mat-menu #menuConta="matMenu" xPosition="before">
+          <div class="menu-cabecalho">
+            <strong>{{ usuario.nome }}</strong>
+            <span>{{ usuario.perfil === 'instrutor' ? 'Instrutor' : 'Aluno' }}</span>
+          </div>
+          <a mat-menu-item routerLink="/cursos" class="so-mobile">
+            <mat-icon fontSet="material-symbols-rounded">menu_book</mat-icon>Cursos
+          </a>
+          <a mat-menu-item routerLink="/minha-area">
+            <mat-icon fontSet="material-symbols-rounded">school</mat-icon>Meus estudos
+          </a>
+          @if (auth.ehInstrutor()) {
+            <a mat-menu-item routerLink="/instrutor">
+              <mat-icon fontSet="material-symbols-rounded">dashboard</mat-icon>Painel do instrutor
+            </a>
+          }
+          <button mat-menu-item (click)="auth.logout()">
+            <mat-icon fontSet="material-symbols-rounded">logout</mat-icon>Sair
+          </button>
+        </mat-menu>
+      } @else {
+        <a mat-button routerLink="/cursos" class="so-mobile">Cursos</a>
+        <a mat-flat-button routerLink="/login">Entrar</a>
+      }
+    </div>
+  </div>
+</header>

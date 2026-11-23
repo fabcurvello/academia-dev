@@ -1,0 +1,107 @@
+@if (curso(); as curso) {
+  @if (atual(); as aula) {
+    <div class="layout">
+      <section class="principal">
+        <a class="voltar" [routerLink]="['/cursos', curso.slug]">{{ curso.titulo }}</a>
+
+        <div class="video">
+          @if (liberada()) {
+            <youtube-player
+              [videoId]="aula.videoId"
+              [playerVars]="playerVars"
+              [width]="1280"
+              [height]="720"
+              (stateChange)="aoMudarEstado($event)"
+            />
+          } @else {
+            <div class="bloqueado">
+              <h2>Esta aula estreia em breve</h2>
+              <app-contagem-regressiva [alvo]="estreia(aula.estreia)" />
+            </div>
+          }
+        </div>
+
+        <div class="cabecalho-aula">
+          <div>
+            <p class="contexto">{{ aula.modulo.titulo }}, aula {{ posicao() }}</p>
+            <h1>{{ aula.titulo | tituloAula }}</h1>
+          </div>
+          @if (liberada()) {
+            <button
+              mat-stroked-button
+              type="button"
+              class="botao-concluir"
+              [class.feito]="concluida()"
+              [attr.aria-pressed]="concluida()"
+              (click)="alternarConcluida()"
+            >
+              <mat-icon fontSet="material-symbols-rounded">{{ concluida() ? 'check_circle' : 'radio_button_unchecked' }}</mat-icon>
+              {{ concluida() ? 'Concluída' : 'Marcar como concluída' }}
+            </button>
+          }
+        </div>
+
+        <nav class="navegacao" aria-label="Navegar entre aulas">
+          @if (anterior(); as a) {
+            <a mat-button [routerLink]="['/cursos', curso.slug, 'aula', a.videoId]">
+              <mat-icon fontSet="material-symbols-rounded">chevron_left</mat-icon>Aula anterior
+            </a>
+          } @else {
+            <span></span>
+          }
+          @if (proxima(); as p) {
+            <a mat-flat-button [routerLink]="['/cursos', curso.slug, 'aula', p.videoId]">
+              Próxima aula<mat-icon iconPositionEnd fontSet="material-symbols-rounded">chevron_right</mat-icon>
+            </a>
+          }
+        </nav>
+
+        <p class="texto-suave rodape-aula">
+          Título original no YouTube: {{ aula.titulo }}.
+          <a [href]="'https://www.youtube.com/watch?v=' + aula.videoId" target="_blank" rel="noopener">Abrir no YouTube</a>
+        </p>
+      </section>
+
+      <aside class="lista" aria-label="Aulas do curso">
+        @if (progresso(); as p) {
+          <div class="lista-topo">
+            <strong>{{ p.percentual }}% concluído</strong>
+            <div class="progresso" [style.--valor]="p.percentual + '%'"></div>
+          </div>
+        }
+        <div class="lista-rolagem">
+          @for (modulo of curso.modulos; track modulo.titulo) {
+            <h2>{{ modulo.titulo }}</h2>
+            <ol>
+              @for (item of modulo.aulas; track item.videoId) {
+                @let ok = cursos.aulaLiberada(item);
+                @let feita = matriculas.concluida(curso.slug, item.videoId);
+                <li [class.atual]="item.videoId === aula.videoId">
+                  @if (ok) {
+                    <a [routerLink]="['/cursos', curso.slug, 'aula', item.videoId]" [attr.aria-current]="item.videoId === aula.videoId ? 'page' : null">
+                      <mat-icon fontSet="material-symbols-rounded" [class.feita]="feita">{{ feita ? 'check_circle' : 'play_circle' }}</mat-icon>
+                      <span>{{ item.titulo | tituloAula }}</span>
+                      <small>{{ item.duracao | duracao }}</small>
+                    </a>
+                  } @else {
+                    <span class="item-bloqueado">
+                      <mat-icon fontSet="material-symbols-rounded">schedule</mat-icon>
+                      <span>{{ item.titulo | tituloAula }}</span>
+                    </span>
+                  }
+                </li>
+              }
+            </ol>
+          }
+        </div>
+      </aside>
+    </div>
+  } @else {
+    <div class="pagina">
+      <h1>Aula não encontrada</h1>
+      <a mat-flat-button [routerLink]="['/cursos', curso.slug]">Voltar para o curso</a>
+    </div>
+  }
+} @else {
+  <div class="pagina"><p class="texto-suave">Carregando aula…</p></div>
+}

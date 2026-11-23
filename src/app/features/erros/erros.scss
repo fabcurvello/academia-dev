@@ -1,0 +1,26 @@
+.erro {
+  text-align: center;
+  padding-block: clamp(48px, 10vw, 120px);
+
+  p {
+    margin-inline: auto;
+  }
+}
+
+.codigo {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 0 12px;
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: clamp(4rem, 12vw, 7rem);
+  line-height: 1;
+  background: linear-gradient(transparent 55%, var(--marca-texto) 55% 92%, transparent 92%);
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}

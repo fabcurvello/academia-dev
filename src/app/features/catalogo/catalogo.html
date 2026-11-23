@@ -1,0 +1,57 @@
+<div class="pagina">
+  <h1>Cursos</h1>
+  <p class="texto-suave intro">
+    Todos gratuitos. Busque por assunto: a busca também procura no nome de cada aula.
+  </p>
+
+  <div class="filtros">
+    <mat-form-field appearance="outline" class="campo-busca" subscriptSizing="dynamic">
+      <mat-label>Buscar cursos e aulas</mat-label>
+      <mat-icon matPrefix fontSet="material-symbols-rounded">search</mat-icon>
+      <input matInput type="search" [formControl]="campoBusca" placeholder="Ex.: laço for, dicionários, MySQL" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="campo-ordem" subscriptSizing="dynamic">
+      <mat-label>Ordenar por</mat-label>
+      <mat-select [value]="ordemAtual()" (selectionChange)="mudarOrdem($event.value)">
+        <mat-option value="recomendados">Recomendados</mat-option>
+        <mat-option value="mais-aulas">Mais aulas</mat-option>
+        <mat-option value="mais-curtos">Mais curtos</mat-option>
+        <mat-option value="titulo">Título (A a Z)</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <mat-chip-listbox aria-label="Filtrar por linguagem" class="chips">
+    @for (cat of facade.categorias; track cat) {
+      <mat-chip-option [selected]="categoria() === cat" (click)="filtrarCategoria(cat)">{{ cat }}</mat-chip-option>
+    }
+  </mat-chip-listbox>
+
+  <p class="resumo" aria-live="polite">
+    @if (facade.carregado()) {
+      {{ resultado().length }} {{ resultado().length === 1 ? 'curso encontrado' : 'cursos encontrados' }}
+      @if (temFiltro()) {
+        <button mat-button type="button" (click)="limparFiltros()">Limpar filtros</button>
+      }
+    }
+  </p>
+
+  @if (facade.carregado()) {
+    @if (resultado().length) {
+      <div class="grade">
+        @for (curso of resultado(); track curso.slug) {
+          <app-card-curso [curso]="curso" />
+        }
+      </div>
+    } @else {
+      <div class="vazio">
+        <h2>Nenhum curso com "{{ busca() }}"</h2>
+        <p class="texto-suave">Tente um termo mais curto, como "while" ou "variáveis", ou veja todos os cursos.</p>
+        <button mat-flat-button type="button" (click)="limparFiltros()">Ver todos os cursos</button>
+      </div>
+    }
+  } @else if (!facade.erro()) {
+    <p class="texto-suave">Carregando cursos…</p>
+  }
+</div>

@@ -1,0 +1,138 @@
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 24px 0 32px;
+
+  div {
+    padding: 16px 20px;
+    background: var(--folha);
+    border: 1px solid var(--pauta);
+    border-radius: var(--raio-m);
+  }
+
+  dt {
+    color: var(--tinta-suave);
+    font-size: 0.9rem;
+  }
+
+  dd {
+    margin: 4px 0 0;
+    font-family: var(--fonte-titulo);
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 1;
+  }
+}
+
+.colunas {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(260px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.bloco {
+  padding: 20px;
+  background: var(--folha);
+  border: 1px solid var(--pauta);
+  border-radius: var(--raio-g);
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+.tabela-rolagem {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  --mat-table-background-color: transparent;
+
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.num {
+  white-space: nowrap;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.tag {
+  margin-left: 8px;
+  padding: 1px 8px;
+  border-radius: 99px;
+  background: var(--marca-texto);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.calendario {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+
+  li {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 0;
+    border-top: 1px solid var(--pauta);
+  }
+
+  time {
+    display: grid;
+    place-items: center;
+    padding: 6px 0;
+    border-radius: var(--raio-p);
+    background: var(--marca-texto);
+    line-height: 1.1;
+
+    strong {
+      font-family: var(--fonte-titulo);
+      font-size: 1.3rem;
+    }
+    span {
+      font-size: 0.75rem;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+  .aula {
+    font-weight: 700;
+  }
+  .texto-suave {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .numeros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .colunas {
+    grid-template-columns: 1fr;
+  }
+}

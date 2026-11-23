@@ -1,0 +1,218 @@
+// Abertura em "folha de caderno": pauta horizontal + linha de margem vermelha
+.abertura {
+  background-color: var(--folha);
+  background-image:
+    linear-gradient(90deg, transparent calc(var(--gutter) + 18px), var(--margem) calc(var(--gutter) + 18px) calc(var(--gutter) + 20px), transparent calc(var(--gutter) + 20px)),
+    repeating-linear-gradient(transparent 0 31px, var(--pauta) 31px 32px);
+  border-bottom: 1px solid var(--pauta);
+}
+
+.abertura-conteudo {
+  max-width: var(--largura-max);
+  margin-inline: auto;
+  padding: clamp(40px, 8vw, 88px) var(--gutter) clamp(40px, 7vw, 72px) calc(var(--gutter) + 48px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.9fr);
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+
+.chamada h1 {
+  max-width: 14ch;
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  color: var(--tinta-suave);
+  max-width: 46ch;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 20px;
+}
+
+.numeros {
+  font-size: 0.95rem;
+  font-weight: 700;
+  max-width: 48ch;
+  background: linear-gradient(transparent 58%, var(--marca-texto) 58% 94%, transparent 94%);
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.destaque {
+  background: var(--papel);
+  border: 1px solid var(--pauta);
+  border-radius: var(--raio-g);
+  padding: 24px;
+  box-shadow: var(--sombra-folha);
+  display: grid;
+  gap: 10px;
+  transform: rotate(-0.6deg);
+
+  a {
+    justify-self: start;
+    margin-top: 6px;
+  }
+}
+
+.destaque-titulo {
+  font-size: 1rem;
+  font-family: var(--fonte-texto);
+  font-weight: 700;
+  color: var(--tinta-suave);
+  margin: 0;
+}
+
+.destaque-curso {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: 1.45rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.destaque-aula {
+  margin: 0 0 4px;
+}
+
+.quando {
+  margin: 0;
+  font-size: 0.9rem;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.pagina > section + section {
+  margin-top: clamp(48px, 7vw, 80px);
+}
+
+.trilhas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.trilha {
+  --cor: var(--cor-python);
+  display: grid;
+  gap: 6px;
+  padding: 20px 22px;
+  border-radius: var(--raio-m);
+  background: var(--folha);
+  border: 1px solid var(--pauta);
+  border-left: 6px solid var(--cor);
+  text-decoration: none;
+  transition: border-color 160ms ease;
+
+  strong {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    color: var(--cor);
+  }
+
+  span {
+    color: var(--tinta-suave);
+  }
+
+  .qtd {
+    font-weight: 700;
+    color: var(--tinta);
+    font-size: 0.9rem;
+  }
+
+  &:hover {
+    border-color: var(--cor);
+  }
+
+  &.Java {
+    --cor: var(--cor-java);
+  }
+  &.Banco {
+    --cor: var(--cor-bd);
+  }
+}
+
+.secao-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.ver-todos {
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.esqueleto {
+  height: 360px;
+  border-radius: var(--raio-g);
+  background: linear-gradient(100deg, var(--pauta) 30%, #eef1f7 50%, var(--pauta) 70%);
+  background-size: 300% 100%;
+  animation: brilho 1.4s linear infinite;
+}
+
+@keyframes brilho {
+  to {
+    background-position: -150% 0;
+  }
+}
+
+.aviso-erro {
+  padding: 16px 20px;
+  border-radius: var(--raio-m);
+  background: #fbeadb;
+  color: var(--alerta);
+  font-weight: 700;
+}
+
+.professor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  border-radius: var(--raio-g);
+  background: var(--tinta);
+  color: #fff;
+
+  p {
+    color: #c9d2e6;
+    margin: 0;
+  }
+
+  a {
+    --mat-button-outlined-label-text-color: #fff;
+    --mat-button-outlined-outline-color: rgb(255 255 255 / 0.5);
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .abertura-conteudo {
+    grid-template-columns: 1fr;
+    padding-left: calc(var(--gutter) + 36px);
+  }
+  .destaque {
+    transform: none;
+  }
+  .trilhas {
+    grid-template-columns: 1fr;
+  }
+  .professor {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

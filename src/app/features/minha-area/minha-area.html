@@ -1,0 +1,47 @@
+<div class="pagina">
+  <h1>Olá, {{ auth.primeiroNome() }}</h1>
+
+  @if (itens().length) {
+    <p class="resumo">
+      {{ resumo().cursos }} {{ resumo().cursos === 1 ? 'curso em andamento' : 'cursos em andamento' }},
+      {{ resumo().concluidas }} {{ resumo().concluidas === 1 ? 'aula concluída' : 'aulas concluídas'
+      }}{{ resumo().finalizados ? ' e ' + resumo().finalizados + (resumo().finalizados === 1 ? ' curso finalizado' : ' cursos finalizados') : '' }}.
+    </p>
+
+    <ul class="lista">
+      @for (item of itens(); track item.curso.slug) {
+        <li class="item">
+          <app-capa-curso [categoria]="item.curso.categoria" [compacta]="true" class="capa" />
+          <div class="info">
+            <h2><a [routerLink]="['/cursos', item.curso.slug]">{{ item.curso.titulo }}</a></h2>
+            <p class="texto-suave meta">
+              Matrícula em {{ item.matricula.matriculadoEm | date: 'd/MM/yyyy' }}, ritmo {{ ritmos[item.matricula.ritmo].toLowerCase() }}
+            </p>
+            @if (item.progresso.total) {
+              <div class="progresso" [style.--valor]="item.progresso.percentual + '%'"></div>
+              <p class="numeros">
+                {{ item.progresso.percentual }}% concluído, {{ item.progresso.concluidas }} de {{ item.progresso.total }} aulas
+              </p>
+            } @else if (item.estreia) {
+              <p class="numeros">Primeira aula em {{ dataEstreia(item.estreia.estreia) | date: "d 'de' MMMM 'às' HH'h'" }}</p>
+            }
+          </div>
+          <div class="acoes">
+            @if (item.proxima) {
+              <a mat-flat-button [routerLink]="['/cursos', item.curso.slug, 'aula', item.proxima]">
+                {{ item.progresso.concluidas ? 'Continuar' : 'Começar' }}
+              </a>
+            }
+            <button mat-button type="button" (click)="cancelar(item.curso.slug, item.curso.titulo)">Cancelar matrícula</button>
+          </div>
+        </li>
+      }
+    </ul>
+  } @else {
+    <div class="vazio">
+      <h2>Você ainda não está em nenhum curso</h2>
+      <p class="texto-suave">Escolha um curso e faça a matrícula. Seu progresso aparece aqui.</p>
+      <a mat-flat-button routerLink="/cursos">Escolher um curso</a>
+    </div>
+  }
+</div>
