@@ -70,7 +70,7 @@ estreia sozinho quando a data chega: nada precisa ser republicado.
   `prefers-reduced-motion`.
 - ⚡ Renderização no servidor (SSR) nas páginas públicas e lazy loading em todas as rotas.
 
-## 🖼️ Telas
+## 📸 Telas
 
 <table>
   <tr>
@@ -107,7 +107,7 @@ estreia sozinho quando a data chega: nada precisa ser republicado.
   <sub>No celular</sub>
 </div>
 
-## 🅰️ Angular na prática
+## 🧭 Angular na prática
 
 Este projeto nasceu das minhas aulas de Angular (base: [meu-primeiro-app](https://github.com/fabcurvello/meu-primeiro-app))
 e mostra cada conteúdo aplicado em uma funcionalidade real.
@@ -164,7 +164,7 @@ O login é simulado e não há backend. A tela de login tem atalhos para as duas
 
 Matrículas, progresso e cursos criados ficam no `localStorage` do navegador.
 
-## 🏗️ Arquitetura
+## 🧱 Arquitetura
 
 ```
 src/app
